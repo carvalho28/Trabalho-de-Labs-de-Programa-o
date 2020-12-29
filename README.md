@@ -16,27 +16,40 @@ resultado deve ser mostrado no ecrã, e o menu deve voltar a ser exibido.
 As funcionalidades mínimas a disponibilizar são as seguintes:
 
   1 - Devolução do vetor ordenado por ordem crescente;
+  
   2 - Cálculo da mediana dos elementos no vetor;
+  
   3 - Cálculo da multiplicação de todos os elementos no vetor por 3;
+  
   4 - Construção de uma matriz 18 por 2, em que cada linha é composta pelo vetor
       lido  (primeira linha)  e  pelo  quádruplo dos respetivos valores (segunda
       linha);
+      
   5 - Cálculo do logaritmo (base natural) de todos os elementos no vetor;
+  
   6 - Devolução dos valores em posições múltiplas de três do vetor.
+  
 
 
 Uma  versão  mais elaborada  do projeto  deve exibir adicionalmente as seguintes
 características e funcionalidades:
 
+
+
   1 - Leitura de um novo vetor, e devolução de um  vetor que  mistura  metade do
       primeiro vetor e metade do segundo;
+      
   2 - Apresentação da decomposição em números  primos  dos  números  impares  no
       vetor inicial;
+      
   3 - Leitura  de  um novo vetor  1x18,  cálculo  e  devolução  da  matriz 18x18
       resultante do produto do vetor inicial com o novo vetor gerado;
+      
   4 - Cálculo e apresentação da matriz transposta referida no ponto anterior;
+  
   5 - O programa apresenta  adicionalmente  uma  página de ajuda, acessível como
       sendo a entrada 7 no menu.
+      
   6 - O programa  mostra  alguma  ajuda  quando é executado a partir da linha de
       comandos com a flag --help.
       
