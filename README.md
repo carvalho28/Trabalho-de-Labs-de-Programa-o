@@ -27,7 +27,7 @@ As funcionalidades mínimas a disponibilizar são as seguintes:
       
   5 - Cálculo do logaritmo (base natural) de todos os elementos no vetor;
   
-  6 - Devolução dos valores em posições múltiplas de três do vetor.<\s>
+  6 - Devolução dos valores em posições múltiplas de três do vetor.</s>
   
 
 
