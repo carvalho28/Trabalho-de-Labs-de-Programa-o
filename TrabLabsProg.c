@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 #include <math.h>
 
@@ -18,14 +19,15 @@ int menuPrincipal(void)
 {
     int resposta = -1;
 
-    printf("\n\nMenu Principal\n\n");
-    printf("1-\tOrdenar Vetor por Ordem Crescente\n");
-    printf("2-\tMediana dos Elementos do Vetor\n");
-    printf("3-\tMultiplicar Todos os Elementos do Vetor por 3\n");
-    printf("4-\tCriar Matriz com Vetor e com Quádruplos\n");
-    printf("5-\tCálcular o Logaritmo de Base Natural de Todos os Elementos do Vetor\n");
-    printf("6-\tValores das Posições Múltiplas de Três do Vetor\n");
-    printf("\n0-\tSair\n");
+    printf("\e[1;1H\e[2J"); 
+    printf("Menu Principal\n\n");
+    printf("1. Ordenar Vetor por Ordem Crescente\n");
+    printf("2. Mediana dos Elementos do Vetor\n");
+    printf("3. Multiplicar Todos os Elementos do Vetor por 3\n");
+    printf("4. Criar Matriz com Vetor e com Quádruplos\n");
+    printf("5. Cálcular o Logaritmo de Base Natural de Todos os Elementos do Vetor\n");
+    printf("6. Valores das Posições Múltiplas de Três do Vetor\n");
+    printf("\n0. Sair\n");
     //Fazer mais uma opção para trocar vetor;
 
     do
@@ -58,9 +60,6 @@ int *ordemCrescente(int *vet)
         }
     }
 
-    /*limpaInputBuffer();
-    printf("Prima 'Enter' para continuar.\n");*/
-
     return vet;
 }
 
@@ -69,7 +68,7 @@ void medianaDosElementos(int *vet)
 {
     int soma;
     float mediana;
-    ordemCrescente(vet);
+    //ordemCrescente(vet);
     // 18 / 2 = 9;
 
     soma = (vet[8] + vet[9]); // Como N é par, 18, e a sua metade é ímpar, a mediana é através da soma dos seus valores 'do meio'
@@ -136,16 +135,17 @@ void matriz2Por18ComQuadruplos(int *vet)
 void logaritmoDosElementos(int *vet)
 {
     int i;
+    float vetAux[N] = {};
 
     for (i = 0; i < N; i++)
     {
-        vet[i] = log(vet[i]);
+        vetAux[i] = log(vet[i]);
     }
 
     printf("O conjunto dos logaritmo de base 10 dos elementos é: ");
     for (i = 0; i < N; i++)
     {
-        printf("%d ", vet[i]);
+        printf("%.2f ", vetAux[i]);
     }
     printf("\n");
 }
@@ -172,6 +172,7 @@ int main()
     int vetAux[N], vet[N], vetAux2[N], vetAux3[N], vetAux4[N] = {};
     int i, resposta_menu;
 
+    printf("\e[1;1H\e[2J");
     printf("Seja bem-vindo(a) ao trabalho do Grupo N!\n");
     printf("\nInsira 18 números inteiros compreendidos entre 6 e 28:\n");
 
@@ -191,66 +192,64 @@ int main()
 
     for (i = 0; i < N; i++)
     {
-        // printf("%d\t", vet[i]);
         vetAux[i] = vet[i];
         vetAux2[i] = vet[i];
         vetAux3[i] = vet[i];
         vetAux4[i] = vet[i];
     }
 
-    ordemCrescente(vetAux);
-    printf("O conjunto por ordem crescente é: ");
-    for (i = 0; i < N; ++i)
-    {
-        printf("%d ", vetAux[i]);
-    }
-    printf("\n\n");
-
-    medianaDosElementos(vetAux);
-    printf("\n");
-
-    multiplicaPorTres(vet);
-    printf("\n");
-
-    matriz2Por18ComQuadruplos(vetAux2);
-    printf("\n");
-
-    logaritmoDosElementos(vetAux3);
-    printf("\n");
-
-    valoresDasPosicoesMult3(vetAux4);
-    printf("\n");
-    /*do
+    do
     {
         resposta_menu = menuPrincipal();
-
-        //printf("\e[1;1H\e[2J");
         switch (resposta_menu)
         {
         case 1:
-            ordemCrescente(vetAux);
+            ordemCrescente(vet);
             printf("O conjunto por ordem crescente é: ");
             for (i = 0; i < N; ++i)
             {
                 printf("%d ", vet[i]);
             }
             printf("\n");
+            printf("Prima 'Enter' para continuar.\n");
+            limpaInputBuffer();
+            break;
         case 2:
-            medianaDosElementos(vetAux);
+            medianaDosElementos(vet);
+            printf("\n");
+            printf("Prima 'Enter' para continuar.\n");
+            limpaInputBuffer();
+            break;
         case 3:
             multiplicaPorTres(vetAux);
+            printf("\n");
+            printf("Prima 'Enter' para continuar.\n");
+            limpaInputBuffer();
+            break;
         case 4:
-            matriz2Por18ComQuadruplos(vetAux);
-
+            matriz2Por18ComQuadruplos(vetAux2);
+            printf("\n");
+            printf("Prima 'Enter' para continuar.\n");
+            limpaInputBuffer();
+            break;
         case 5:
-            logaritmoDosElementos(vetAux);
-
+            logaritmoDosElementos(vetAux3);
+            printf("Prima 'Enter' para continuar.\n");
+            limpaInputBuffer();
+            break;
         case 6:
-            valoresDasPosicoesMult3(vetAux);
+            valoresDasPosicoesMult3(vetAux4);
+            printf("\n");
+            printf("Prima 'Enter' para continuar.\n");
+            limpaInputBuffer();
+            break;
+        case 0:
+            exit(1);
         default:
             printf("Input inválido, por favor tente novamente.\n");
+            break;
         }
     } while (resposta_menu != 0); //condição para repetir o menu
-*/
+
     return 0;
 }
