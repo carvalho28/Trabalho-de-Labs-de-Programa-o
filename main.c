@@ -10,8 +10,7 @@
 //Função que limpa o buffer do input. Útil para elminar "\n" do buffer após o uso da função scanf;
 void limpaInputBuffer()
 {
-    while (getchar() != '\n')
-        ;
+    while (getchar() != '\n');
 }
 
 //Menu principal que devolve o numero da operação a realizar no array
@@ -19,7 +18,7 @@ int menuPrincipal(void)
 {
     int resposta = -1;
 
-    printf("\e[1;1H\e[2J"); 
+    printf("\e[1;1H\e[2J");
     printf("Menu 1\n\n");
     printf("1. Ordenar Vetor por Ordem Crescente\n");
     printf("2. Mediana dos Elementos do Vetor\n");
@@ -38,6 +37,7 @@ int menuPrincipal(void)
         }
         limpaInputBuffer();
     } while (resposta < 0 || resposta > 6);
+    printf("\n");
 
     return resposta;
 }
@@ -166,28 +166,103 @@ void valoresDasPosicoesMult3(int *vet)
     printf("\n");
 }
 
-// Leitura de um novo vetor, e devolução de um vetor que mistura metade do primeiro vetor e metade do segundo
-int *misturaMetadeVetores(int *vet1, int *vet2)
+// Leitura de um novo vetor, e mostra um vetor que mistura metade do primeiro vetor e metade do segundo
+void misturaMetadeVetores(int *vet1, int *vet2)
 {
+    int i, j;
     int vet3[N];
 
-    for (int i = 0; i < N/2; i++)
+    for (i = 0; i < N/2; i++)
     {
         vet3[i] = vet1[i];
     }
 
-    for (int i = N/2; i < N; i++)
+    for (i = N/2; i < N; i++)
     {
         vet3[i] = vet2[i];
     }
-    
-    return vet3;
+
+    printf("O novo vetor com metade do primeiro e metade do segundo é:\n");
+    for(j = 0; j < N; j++)
+    {
+        printf("%d ", vet3[j]);
+    }
+}
+
+void decompoeImparesEmPrimos(int *vet)
+{
+    int i, j, k, contador, aux, posicao = 0;
+    int primos[8] = {};
+    int fatores[10] = {};
+
+    //Armazena os numeros primos maiores que 2 num array, dado que os números a verificar são ímpares
+    for(i = 3; i <= 28; i++)
+    {
+            contador = 0;
+            for(j = 1; j <= 28; j++)
+            {
+                if(i % j == 0)
+                {
+                    contador++;
+                }
+            }
+            if(contador == 2)
+            {
+                primos[posicao] = i;
+                posicao++;
+            }
+    }
+
+    for(i = 0; i < N; k++)
+    {
+        aux = 1;
+        contador = -1;
+
+        //Verifica se o número do array é ímpar
+        if(vet[i] % 2 != 0)
+        {
+            contador = 0;
+            aux = vet[i];
+            for(j = 0; j < 8; j++)
+            {
+                //Guarda os numeros primos pelos quais o ímpar é divisível
+                if(aux % primos[j] == 0)
+                {
+                    fatores[contador] = primos[j];
+                    aux = aux / primos[j];
+                    contador++;
+                    j--;
+                }
+
+                if(aux == 1)
+                {
+                    printf("Decomposição do número %d na posição: %d\n", vet[i], i+1);
+                    for(int k = 0; k < contador; k++)
+                    {
+                        if(k < contador && k != 0)
+                        {
+                            printf(" *");
+                        }
+                        printf(" %d", fatores[k]);
+                    }
+                    printf("\n\n");
+
+                    break;
+                }
+            }
+        }
+    }
+
+    if(contador == -1)
+    {
+        printf("\nNão há números ímpares!\n");
+    }
 }
 
 //Não pode levar void no argumento por causa do --help
 int main()
 {
-    int vet[N], vetAux[N], vetAux2[N], vetAux3[N], vetAux4[N] = {};
+    int vet[N], vetAux[N], vetAux2[N], vetAux3[N], vetAux4[N], vetAux5[N];
     int vet2[N] = {};
     int i, resposta_menu;
 
@@ -215,6 +290,7 @@ int main()
         vetAux2[i] = vet[i];
         vetAux3[i] = vet[i];
         vetAux4[i] = vet[i];
+        vetAux5[i] = vet[i];
     }
 
     do
@@ -229,25 +305,21 @@ int main()
             {
                 printf("%d ", vet[i]);
             }
-            printf("\n");
             printf("Prima 'Enter' para continuar.\n");
             limpaInputBuffer();
             break;
         case 2:
             medianaDosElementos(vet);
-            printf("\n");
             printf("Prima 'Enter' para continuar.\n");
             limpaInputBuffer();
             break;
         case 3:
             multiplicaPorTres(vetAux);
-            printf("\n");
             printf("Prima 'Enter' para continuar.\n");
             limpaInputBuffer();
             break;
         case 4:
             matriz2Por18ComQuadruplos(vetAux2);
-            printf("\n");
             printf("Prima 'Enter' para continuar.\n");
             limpaInputBuffer();
             break;
@@ -258,10 +330,14 @@ int main()
             break;
         case 6:
             valoresDasPosicoesMult3(vetAux4);
-            printf("\n");
             printf("Prima 'Enter' para continuar.\n");
             limpaInputBuffer();
             break;
+            /*
+        case 7:
+            decompoeImparesEmPrimos(vetAux5);
+            break;
+            */
         case 0:
             exit(1);
         default:
@@ -269,9 +345,10 @@ int main()
             break;
         }
     } while (resposta_menu != 0); //condição para repetir o menu
-    
 
-    // Segundo Vetor
+
+    /* Segundo Vetor
+    printf("Segundo vetor:\n");
     for (i = 0; i < N; i++)
     {
         do
@@ -285,6 +362,8 @@ int main()
             limpaInputBuffer();
         } while (vet2[i] <= 6 || vet2[i] >= 28);
     }
+    misturaMetadeVetores(vet, vet2);*/
+
 
     return 0;
 }
