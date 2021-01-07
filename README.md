@@ -15,7 +15,7 @@ pela  ordem  colocadas  neste  enunciado.  Depois de  se  escolher  uma opção,
 resultado deve ser mostrado no ecrã, e o menu deve voltar a ser exibido.
 As funcionalidades mínimas a disponibilizar são as seguintes:
 
-  <s>1 - Devolução do vetor ordenado por ordem crescente;<s>
+  <s>1 - Devolução do vetor ordenado por ordem crescente;
   
   2 - Cálculo da mediana dos elementos no vetor;
   
