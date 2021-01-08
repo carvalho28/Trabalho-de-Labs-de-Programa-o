@@ -36,11 +36,11 @@ características e funcionalidades:
 
 
 
-  1 - Leitura de um novo vetor, e devolução de um  vetor que  mistura  metade do
+  <s>1 - Leitura de um novo vetor, e devolução de um  vetor que  mistura  metade do
       primeiro vetor e metade do segundo;
       
   2 - Apresentação da decomposição em números  primos  dos  números  impares  no
-      vetor inicial;
+      vetor inicial;</s>
       
   3 - Leitura  de  um novo vetor  1x18,  cálculo  e  devolução  da  matriz 18x18
       resultante do produto do vetor inicial com o novo vetor gerado;
