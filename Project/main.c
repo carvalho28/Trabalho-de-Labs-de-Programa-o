@@ -7,8 +7,8 @@
   * @file main.c
   * @brief This program asks the user 18 numbers that are stored in a vector to provide a way to calculate some statistics or make operations with those values. The input values should be between 6 and 28. 
   * @version 0.1
-  * @authors Team 13: Diogo Carvalho Nº 45716, Eduardo Mendes Nº 45916, Francisco Casais  Nº 45465, Guilherme Barata Nº 45779 and João Marques Nº 45722.
-  * @copyright Copyright 2021 Team 13. All rights reserved. \n This project is released under the Apache License 2.0.
+  * @authors <c>Team 13</c><ul><li>Diogo Carvalho Nº 45716 </li> <li>Eduardo Mendes Nº 45916 </li> <li>Francisco Casais Nº 45465 </li> <li>Guilherme Barata Nº 45779</li> <li>João Marques Nº 45722</li> </ul>
+  * @copyright Copyright 2021 <c>Team 13</c>. All rights reserved. \n This project is released under the Apache License 2.0.
   */
 
 

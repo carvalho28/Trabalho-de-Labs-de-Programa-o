@@ -77,9 +77,16 @@ This program asks the user 18 numbers that are stored in a vector to provide a w
 0.\+1 
 \end{DoxyVersion}
 \begin{DoxyAuthor}{Authors}
-Team 13\+: Diogo Carvalho Nº 45716, Eduardo Mendes Nº 45916, Francisco Casais Nº 45465, Guilherme Barata Nº 45779 and João Marques Nº 45722. 
+{\ttfamily Team 13}
+\begin{DoxyItemize}
+\item Diogo Carvalho Nº 45716  
+\item Eduardo Mendes Nº 45916  
+\item Francisco Casais Nº 45465  
+\item Guilherme Barata Nº 45779 
+\item João Marques Nº 45722 
+\end{DoxyItemize}
 \end{DoxyAuthor}
 \begin{DoxyCopyright}{Copyright}
-Copyright 2021 Team 13. All rights reserved. ~\newline
+Copyright 2021 {\ttfamily Team 13}. All rights reserved. ~\newline
  This project is released under the Apache License 2.\+0. 
 \end{DoxyCopyright}
