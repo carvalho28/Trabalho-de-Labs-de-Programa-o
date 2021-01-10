@@ -44,6 +44,20 @@ int menuPrincipal(void)
     return resposta;
 }
 
+//Função que copia o vetor dado pelo utilizador para um vetor auxiliar
+void criaVetorAuxiliar(int vetInicial[N][M], int vetAuxiliar[N][M])
+{
+    int i, j;
+
+    for(i = 0; i < N; i++)
+    {
+        for(j = 0; j < M; j++)
+        {
+            vetAuxiliar[i][j] = vetInicial[i][j];
+        }
+    }
+}
+
 //Imprime o vetor por ordem crescente
 void ordemCrescente(int vet[N][1])
 {
@@ -61,14 +75,6 @@ void ordemCrescente(int vet[N][1])
             }
         }
     }
-
-    printf("O conjunto por ordem crescente é: ");
-    for (i = 0; i < N; ++i)
-    {
-        printf("%d ", vet[i][0]);
-    }
-    printf("Prima 'Enter' para continuar.\n");
-    limpaInputBuffer();
 }
 
 //Cálcula a mediana dos elementos do vetor
@@ -93,7 +99,6 @@ void medianaDosElementos(int vet[N][1])
     }
 
     soma = (vet[8][0] + vet[9][0]); // Como N é par, 18, e a sua metade é ímpar, a mediana é através da soma dos seus valores 'do meio'
-    printf("1nSoma: %d\n", soma);
     mediana = soma / 2;
 
     printf("A mediana do conjunto dado é: %.2f\n", mediana);
@@ -147,7 +152,7 @@ void matriz2Por18ComQuadruplos(int vet[N][1])
     {
         for (j = 0; j < N; j++)
         {
-            printf("%d ", arrVetor[i][j]);
+            printf("%4d ", arrVetor[i][j]);
         }
         printf("\n");
     }
@@ -164,10 +169,10 @@ void logaritmoDosElementos(int vet[N][1])
         vetAux[i][0] = log(vet[i][0]);
     }
 
-    printf("O conjunto dos logaritmo de base 10 dos elementos é: ");
+    printf("O conjunto dos logaritmo de base 10 dos elementos é:\n");
     for (i = 0; i < N; i++)
     {
-        printf("%.2f ", vetAux[i][0]);
+        printf("%5.2f ", vetAux[i][0]);
     }
     printf("\n");
 }
@@ -189,10 +194,27 @@ void valoresDasPosicoesMult3(int vet[N][1])
 }
 
 // Leitura de um novo vetor, e mostra um vetor que mistura metade do primeiro vetor e metade do segundo
-void misturaMetadeVetores(int vet1[N][1], int vet2[N][1])
+void misturaMetadeVetores(int vet1[N][M])
 {
     int i, j;
-    int vet3[N][0];
+    int vet2[N][1], vet3[N][1];
+
+    //Segundo Vetor
+    printf("Segundo vetor:\n");
+    for (i = 0; i < N; i++)
+    {
+        do
+        {
+            printf("Posição nº%d: ", i + 1); //Nota verificar se 6 e 28 pertencem a input;
+            if (scanf("%d", &vet2[i][0]) != 1 || vet2[i][0] <= 6 || vet2[i][0] >= 28)
+            {
+                printf("\nInput inválido. Tente novamente.\n");
+            }
+            printf("\n");
+            limpaInputBuffer();
+        }
+        while (vet2[i][0] <= 6 || vet2[i][0] >= 28);
+    }
 
     for (i = 0; i < N / 2; i++)
     {
@@ -281,10 +303,10 @@ void decompoeImparesEmPrimos(int vet[N][1])
     }
 }
 
-int **matriz18por18(int vet[N][1])
+int matriz18por18(int vet[N][1], int vet18x18[N][N])
 {
 
-    int vet18x18[N][N] = {}, vet3[1][N];
+    int vet3[1][N];
 
     int i, j, k;
 
@@ -322,12 +344,10 @@ int **matriz18por18(int vet[N][1])
     {
         for (j = 0; j < N; j++)
         {
-            printf("%d ", vet18x18[i][j]);
+            printf("%4d ", vet18x18[i][j]);
         }
         printf("\n");
     }
-
-    return vet18x18;
 }
 
 void transposta18por18(int vet[N][N])
@@ -348,7 +368,7 @@ void transposta18por18(int vet[N][N])
     {
         for (j = 0; j < N; j++)
         {
-            printf("%d ", vet[i][j]);
+            printf("%4d ", transposta[i][j]);
         }
         printf("\n");
     }
@@ -357,9 +377,9 @@ void transposta18por18(int vet[N][N])
 //Não pode levar void no argumento por causa do --help
 int main()
 {
-    int vet[N][M], vetAux[N], vetAux2[N], vetAux3[N], vetAux4[N], vetAux5[N], vetAux6[N];
-    int vet2[N] = {};
-    int vet3[N][M];
+    int vet[N][M] = {}, vetAux[N][M] = {};
+    int vet2[N][M] = {};
+    int vet18x18[N][N] = {};
     int i, j, resposta_menu;
 
     printf("\e[1;1H\e[2J");
@@ -381,49 +401,47 @@ int main()
         while (vet[i][0] <= 6 || vet[i][0] >= 28);
     }
 
-    /*
-    for (i = 0; i < N; i++)
-    {
-        vetAux[i] = vet[i];
-        vetAux2[i] = vet[i];
-        vetAux3[i] = vet[i];
-        vetAux4[i] = vet[i];
-        vetAux5[i] = vet[i];
-        vetAux6[i] = vet[i];
-    }
-    */
-
     do
     {
+        criaVetorAuxiliar(vet, vetAux);
+
         resposta_menu = menuPrincipal();
         switch (resposta_menu)
         {
         case 1:
-            ordemCrescente(vet);
+            ordemCrescente(vetAux);
+            printf("O conjunto por ordem crescente é:\n");
+            for (i = 0; i < N; ++i)
+            {
+                printf("%d ", vetAux[i][M-1]);
+            }
+            printf("\n");
+            printf("\nPrima 'Enter' para continuar.\n");
+            limpaInputBuffer();
             break;
         case 2:
-            medianaDosElementos(vet);
-            printf("Prima 'Enter' para continuar.\n");
+            medianaDosElementos(vetAux);
+            printf("\nPrima 'Enter' para continuar.\n");
             limpaInputBuffer();
             break;
         case 3:
-            multiplicaPorTres(vet);
-            printf("Prima 'Enter' para continuar.\n");
+            multiplicaPorTres(vetAux);
+            printf("\nPrima 'Enter' para continuar.\n");
             limpaInputBuffer();
             break;
         case 4:
-            matriz2Por18ComQuadruplos(vet);
-            printf("Prima 'Enter' para continuar.\n");
+            matriz2Por18ComQuadruplos(vetAux);
+            printf("\nPrima 'Enter' para continuar.\n");
             limpaInputBuffer();
             break;
         case 5:
-            logaritmoDosElementos(vet);
-            printf("Prima 'Enter' para continuar.\n");
+            logaritmoDosElementos(vetAux);
+            printf("\nPrima 'Enter' para continuar.\n");
             limpaInputBuffer();
             break;
         case 6:
-            valoresDasPosicoesMult3(vet);
-            printf("Prima 'Enter' para continuar.\n");
+            valoresDasPosicoesMult3(vetAux);
+            printf("\nPrima 'Enter' para continuar.\n");
             limpaInputBuffer();
             break;
         /*
@@ -440,25 +458,10 @@ int main()
     }
     while (resposta_menu != 0);   //condição para repetir o menu
 
-    /* Segundo Vetor
-    printf("Segundo vetor:\n");
-    for (i = 0; i < N; i++)
-    {
-        do
-        {
-            printf("Posição nº%d: ", i + 1); //Nota verificar se 6 e 28 pertencem a input;
-            if (scanf("%d", &vet2[i]) != 1 || vet2[i] <= 6 || vet2[i] >= 28)
-            {
-                printf("\nInput inválido. Tente novamente.\n");
-            }
-            printf("\n");
-            limpaInputBuffer();
-        } while (vet2[i] <= 6 || vet2[i] >= 28);
-    }
-    misturaMetadeVetores(vet, vet2);*/
+    criaVetorAuxiliar(vet, vetAux);
 
-    int **mat = matriz18por18(vet);
-    transposta18por18(mat);
+    matriz18por18(vetAux, vet18x18);
+    transposta18por18(vet18x18);
 
     return 0;
 }
