@@ -1,0 +1,85 @@
+\hypertarget{main_8c}{}\doxysection{Project/main.c File Reference}
+\label{main_8c}\index{Project/main.c@{Project/main.c}}
+
+
+This program asks the user 18 numbers that are stored in a vector to provide a way to calculate some statistics or make operations with those values. The input values should be between 6 and 28.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+Include dependency graph for main.\+c\+:
+% FIG 0
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{main_8c_a0240ac851181b84ac374872dc5434ee4}\label{main_8c_a0240ac851181b84ac374872dc5434ee4}} 
+\#define {\bfseries N}~18
+\item 
+\mbox{\Hypertarget{main_8c_a52037c938e3c1b126c6277da5ca689d0}\label{main_8c_a52037c938e3c1b126c6277da5ca689d0}} 
+\#define {\bfseries M}~1
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{main_8c_a018db0925c16099439a3610b4bc45f44}\label{main_8c_a018db0925c16099439a3610b4bc45f44}} 
+void {\bfseries limpa\+Input\+Buffer} (void)
+\item 
+\mbox{\Hypertarget{main_8c_aee703d6141f1e0cdc42ba13d9eff5576}\label{main_8c_aee703d6141f1e0cdc42ba13d9eff5576}} 
+void {\bfseries imprime\+Socorro} (void)
+\item 
+\mbox{\Hypertarget{main_8c_a3e1ff8b22a97ab1721a6b6836e81893f}\label{main_8c_a3e1ff8b22a97ab1721a6b6836e81893f}} 
+int {\bfseries menu\+Principal} (void)
+\item 
+\mbox{\Hypertarget{main_8c_af31128654504bd4f6e063dfcd23bc6e6}\label{main_8c_af31128654504bd4f6e063dfcd23bc6e6}} 
+void {\bfseries cria\+Vetor\+Auxiliar} (int vet\+Inicial\mbox{[}N\mbox{]}\mbox{[}M\mbox{]}, int vet\+Auxiliar\mbox{[}N\mbox{]}\mbox{[}M\mbox{]})
+\item 
+\mbox{\Hypertarget{main_8c_acae76ca0dfe1eca9d9f6b026a87611d2}\label{main_8c_acae76ca0dfe1eca9d9f6b026a87611d2}} 
+void {\bfseries ordem\+Crescente} (int vet\mbox{[}N\mbox{]}\mbox{[}1\mbox{]})
+\item 
+\mbox{\Hypertarget{main_8c_a937e06a32352f867b9e6b05152d06862}\label{main_8c_a937e06a32352f867b9e6b05152d06862}} 
+void {\bfseries mediana\+Dos\+Elementos} (int vet\mbox{[}N\mbox{]}\mbox{[}1\mbox{]})
+\item 
+\mbox{\Hypertarget{main_8c_a11d811432c88d483dd6f28f0abf7bde4}\label{main_8c_a11d811432c88d483dd6f28f0abf7bde4}} 
+void {\bfseries multiplica\+Por\+Tres} (int vet\mbox{[}N\mbox{]}\mbox{[}1\mbox{]})
+\item 
+\mbox{\Hypertarget{main_8c_aff6d49fc8e834bad13a46957f042548b}\label{main_8c_aff6d49fc8e834bad13a46957f042548b}} 
+void {\bfseries matriz2\+Por18\+Com\+Quadruplos} (int vet\mbox{[}N\mbox{]}\mbox{[}1\mbox{]})
+\item 
+\mbox{\Hypertarget{main_8c_a465bdc36a42065d041346281b22118ad}\label{main_8c_a465bdc36a42065d041346281b22118ad}} 
+void {\bfseries logaritmo\+Dos\+Elementos} (int vet\mbox{[}N\mbox{]}\mbox{[}1\mbox{]})
+\item 
+\mbox{\Hypertarget{main_8c_abdb727a64bc952b7c265540f6f71fdaf}\label{main_8c_abdb727a64bc952b7c265540f6f71fdaf}} 
+void {\bfseries valores\+Das\+Posicoes\+Mult3} (int vet\mbox{[}N\mbox{]}\mbox{[}1\mbox{]})
+\item 
+\mbox{\Hypertarget{main_8c_aa9e924c33d096e7c3e4187f0958b9e4a}\label{main_8c_aa9e924c33d096e7c3e4187f0958b9e4a}} 
+void {\bfseries mistura\+Metade\+Vetores} (int vet1\mbox{[}N\mbox{]}\mbox{[}M\mbox{]})
+\item 
+\mbox{\Hypertarget{main_8c_a6e80fc904fbb649b3f3f6073c5631cee}\label{main_8c_a6e80fc904fbb649b3f3f6073c5631cee}} 
+void {\bfseries decompoe\+Impares\+Em\+Primos} (int vet\mbox{[}N\mbox{]}\mbox{[}1\mbox{]})
+\item 
+\mbox{\Hypertarget{main_8c_a823344dec95455b9b21f4484832f3fb5}\label{main_8c_a823344dec95455b9b21f4484832f3fb5}} 
+void {\bfseries matriz18por18} (int vet\mbox{[}N\mbox{]}\mbox{[}1\mbox{]}, int vet18x18\mbox{[}N\mbox{]}\mbox{[}N\mbox{]})
+\item 
+\mbox{\Hypertarget{main_8c_abc10ab5c926f34c73ed847d4d5e03ada}\label{main_8c_abc10ab5c926f34c73ed847d4d5e03ada}} 
+void {\bfseries transposta18por18} (int vet\mbox{[}N\mbox{]}\mbox{[}N\mbox{]})
+\item 
+\mbox{\Hypertarget{main_8c_a3c04138a5bfe5d72780bb7e82a18e627}\label{main_8c_a3c04138a5bfe5d72780bb7e82a18e627}} 
+int {\bfseries main} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This program asks the user 18 numbers that are stored in a vector to provide a way to calculate some statistics or make operations with those values. The input values should be between 6 and 28. 
+
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyAuthor}{Authors}
+Team 13\+: Diogo Carvalho Nº 45716, Eduardo Mendes Nº 45916, Francisco Casais Nº 45465, Guilherme Barata Nº 45779 and João Marques Nº 45722. 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+Copyright 2021 Team 13. All rights reserved. ~\newline
+ This project is released under the Apache License 2.\+0. 
+\end{DoxyCopyright}
