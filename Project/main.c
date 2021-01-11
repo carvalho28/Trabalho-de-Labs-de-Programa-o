@@ -11,7 +11,6 @@
   * @copyright Copyright 2021 <c>Team 13</c>. All rights reserved. \n This project is released under the Apache License 2.0.
   */
 
-
 #define N 18
 #define M 1
 
@@ -37,6 +36,7 @@ void imprimeSocorro(void)
     printf("-> Para cada opção o utilizador deve inserir o número indicado seguido de 'Enter';\n");
     printf("-> Para sair da escolha anterior pressionar a tecla 'Enter';\n");
     printf("-> Se desejar inserir outros valores pode fazê-lo, inserindo '0', seguido de 'Enter', no menu principal;\n");
+    printf("-> Para execurtar o programa inserir na linha de comandos ./a.out;");
     printf("-> Votos de bons cálculos!\n\n");
 }
 //Menu principal que devolve o numero da operação a realizar no array
@@ -399,98 +399,106 @@ void transposta18por18(int vet[N][N])
 //Não pode levar void no argumento por causa do --help
 int main(int argc, char **argv)
 {
-    if (argc == 2 && strcmp(argv[1], "--help") == 0)
+    if (argc < 1 || argc > 2)
+    {
+        printf("Número incorreto de argumentos.\n");
+        exit(1);
+    }
+    else if (argc == 2 && strcmp(argv[1], "--help") == 0)
     {
         imprimeSocorro();
         printf("Prima 'Enter' para continuar.\n");
         limpaInputBuffer();
+        exit(1);
     }
-
-    int vet[N][M] = {}, vetAux[N][M] = {};
-    int vet2[N][M] = {};
-    int vet18x18[N][N] = {};
-    int i, j, resposta_menu;
-
-    printf("\e[1;1H\e[2J");
-    printf("Seja bem-vindo(a) ao trabalho do Grupo N!\n");
-    printf("\nInsira 18 números inteiros compreendidos entre 6 e 28:\n");
-
-    for (i = 0; i < N; i++)
+    else
     {
+        int vet[N][M] = {}, vetAux[N][M] = {};
+        int vet2[N][M] = {};
+        int vet18x18[N][N] = {};
+        int i, j, resposta_menu;
+
+        printf("\e[1;1H\e[2J");
+        printf("Seja bem-vindo(a) ao trabalho do Grupo N!\n");
+        printf("\nInsira 18 números inteiros compreendidos entre 6 e 28:\n");
+
+        for (i = 0; i < N; i++)
+        {
+            do
+            {
+                printf("Posição nº%d: ", i + 1); //Nota verificar se 6 e 28 pertencem a input;
+                if (scanf("%d", &vet[i][0]) != 1 || vet[i][0] <= 6 || vet[i][0] >= 28)
+                {
+                    printf("\nInput inválido. Tente novamente.\n");
+                }
+                printf("\n");
+                limpaInputBuffer();
+            } while (vet[i][0] <= 6 || vet[i][0] >= 28);
+        }
+
         do
         {
-            printf("Posição nº%d: ", i + 1); //Nota verificar se 6 e 28 pertencem a input;
-            if (scanf("%d", &vet[i][0]) != 1 || vet[i][0] <= 6 || vet[i][0] >= 28)
-            {
-                printf("\nInput inválido. Tente novamente.\n");
-            }
-            printf("\n");
-            limpaInputBuffer();
-        } while (vet[i][0] <= 6 || vet[i][0] >= 28);
-    }
+            criaVetorAuxiliar(vet, vetAux);
 
-    do
-    {
-        criaVetorAuxiliar(vet, vetAux);
-
-        resposta_menu = menuPrincipal();
-        switch (resposta_menu)
-        {
-        case 1:
-            ordemCrescente(vetAux);
-            printf("O conjunto por ordem crescente é:\n");
-            for (i = 0; i < N; ++i)
+            resposta_menu = menuPrincipal();
+            switch (resposta_menu)
             {
-                printf("%d ", vetAux[i][M - 1]);
-            }
-            printf("\n");
-            printf("\nPrima 'Enter' para continuar.\n");
-            limpaInputBuffer();
-            break;
-        case 2:
-            medianaDosElementos(vetAux);
-            printf("\nPrima 'Enter' para continuar.\n");
-            limpaInputBuffer();
-            break;
-        case 3:
-            multiplicaPorTres(vetAux);
-            printf("\nPrima 'Enter' para continuar.\n");
-            limpaInputBuffer();
-            break;
-        case 4:
-            matriz2Por18ComQuadruplos(vetAux);
-            printf("\nPrima 'Enter' para continuar.\n");
-            limpaInputBuffer();
-            break;
-        case 5:
-            logaritmoDosElementos(vetAux);
-            printf("\nPrima 'Enter' para continuar.\n");
-            limpaInputBuffer();
-            break;
-        case 6:
-            valoresDasPosicoesMult3(vetAux);
-            printf("\nPrima 'Enter' para continuar.\n");
-            limpaInputBuffer();
-            break;
-        /*
+            case 1:
+                ordemCrescente(vetAux);
+                printf("O conjunto por ordem crescente é:\n");
+                for (i = 0; i < N; ++i)
+                {
+                    printf("%d ", vetAux[i][M - 1]);
+                }
+                printf("\n");
+                printf("\nPrima 'Enter' para continuar.\n");
+                limpaInputBuffer();
+                break;
+            case 2:
+                medianaDosElementos(vetAux);
+                printf("\nPrima 'Enter' para continuar.\n");
+                limpaInputBuffer();
+                break;
+            case 3:
+                multiplicaPorTres(vetAux);
+                printf("\nPrima 'Enter' para continuar.\n");
+                limpaInputBuffer();
+                break;
+            case 4:
+                matriz2Por18ComQuadruplos(vetAux);
+                printf("\nPrima 'Enter' para continuar.\n");
+                limpaInputBuffer();
+                break;
+            case 5:
+                logaritmoDosElementos(vetAux);
+                printf("\nPrima 'Enter' para continuar.\n");
+                limpaInputBuffer();
+                break;
+            case 6:
+                valoresDasPosicoesMult3(vetAux);
+                printf("\nPrima 'Enter' para continuar.\n");
+                limpaInputBuffer();
+                break;
+                /*
         case 7:
         decompoeImparesEmPrimos(vetAux5);
         break;
         */
-       case 10:
+            case 10:
 
-        case 0:
-            resposta_menu = 0;
-        default:
-            printf("Input inválido, por favor tente novamente.\n");
-            break;
-        }
-    } while (resposta_menu != 0); //condição para repetir o menu
+            case 0:
+                resposta_menu = 0;
+            default:
+                printf("Input inválido, por favor tente novamente.\n");
+                break;
+            }
+        } while (resposta_menu != 0); //condição para repetir o menu
 
-    criaVetorAuxiliar(vet, vetAux);
+        criaVetorAuxiliar(vet, vetAux);
 
-    matriz18por18(vetAux, vet18x18);
-    transposta18por18(vet18x18);
+        matriz18por18(vetAux, vet18x18);
+        transposta18por18(vet18x18);
+    }
 
     return 0;
 }
