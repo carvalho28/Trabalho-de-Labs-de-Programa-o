@@ -15,6 +15,7 @@
 #define M 1
 
 //Função que limpa o buffer do input. Útil para elminar "\n" do buffer após o uso da função scanf;
+
 void limpaInputBuffer(void)
 {
     while (getchar() != '\n')
@@ -513,17 +514,26 @@ void OpcoesExtra(int vet[N][M])
 
 int main(int argc, char **argv)
 {
-    if (argc < 1 || argc > 2)
+    if (argc > 2)
     {
         printf("Número incorreto de argumentos.\n");
         exit(1);
     }
-    else if (argc == 2 && strcmp(argv[1], "--help") == 0)
+    else if (argc == 2)
     {
-        imprimeSocorro();
-        printf("Prima 'Enter' para continuar.\n");
-        limpaInputBuffer();
-        exit(1);
+        if (strcmp(argv[1], "--help") == 0)
+        {
+            imprimeSocorro();
+            printf("Prima 'Enter' para continuar.\n");
+            limpaInputBuffer();
+            exit(1);
+        }
+        else
+        {
+            printf("Argumento inválido.\n");
+            exit(1);
+        }
+        
     }
     else
     {
