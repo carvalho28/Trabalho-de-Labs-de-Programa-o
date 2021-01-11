@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['main_2ec_1',['main.c',['../main_8c.html',1,'']]]
+  ['decompoeimparesemprimos_1',['decompoeImparesEmPrimos',['../main_8c.html#af705b93fa808a56cca1d212918d55427',1,'main.c']]]
 ];

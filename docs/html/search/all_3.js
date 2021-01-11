@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['subpage_20_2d_20objectives_4',['Subpage - Objectives',['../SUB1.html',1,'Project']]],
-  ['subpage_20_2d_20features_5',['Subpage - Features',['../SUB2.html',1,'Project']]]
+  ['limpainputbuffer_3',['limpaInputBuffer',['../main_8c.html#a018db0925c16099439a3610b4bc45f44',1,'main.c']]],
+  ['logaritmodoselementos_4',['logaritmoDosElementos',['../main_8c.html#a1345b547c5a6f45a5d85f285b97ae17d',1,'main.c']]]
 ];

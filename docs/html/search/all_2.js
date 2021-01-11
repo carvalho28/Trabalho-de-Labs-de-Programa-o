@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['page_20_2d_20github_20repository_2',['Page - Github Repository',['../Github.html',1,'']]],
-  ['page_20_2d_20description_20of_20the_20project_3',['Page - Description of the Project',['../Project.html',1,'']]]
+  ['imprimesocorro_2',['imprimeSocorro',['../main_8c.html#aee703d6141f1e0cdc42ba13d9eff5576',1,'main.c']]]
 ];

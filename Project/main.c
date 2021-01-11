@@ -11,19 +11,29 @@
   * @copyright Copyright 2021 <c>Team 13</c>. All rights reserved. \n This project is released under the Apache License 2.0.
   */
 
+/**
+  * N is the number of rows of the matrix.
+  */
 #define N 18
+/**
+  * M is the number os columns of the matrix.
+  */
 #define M 1
 
+/**
+  * Function that clears the input buffer. Useful for clearing "\n" from the buffer after using the scanf function.
+  */
 //Função que limpa o buffer do input. Útil para elminar "\n" do buffer após o uso da função scanf;
-
 void limpaInputBuffer(void)
 {
     while (getchar() != '\n')
         ;
 }
 
+/**
+  * This function shows the user the help menu.
+  */
 //Função do Socorro
-
 void imprimeSocorro(void)
 {
     printf("\e[1;1H\e[2J");
@@ -38,6 +48,10 @@ void imprimeSocorro(void)
     printf("-> Para execurtar o programa inserir na linha de comandos ./a.out;");
     printf("-> Votos de bons cálculos!\n\n");
 }
+
+/**
+  * This function shows the user the main menu of the program.
+  */
 //Menu principal que devolve o numero da operação a realizar no array
 int menuPrincipal(int vet[N][M])
 {
@@ -87,6 +101,9 @@ int menuPrincipal(int vet[N][M])
     return resposta;
 }
 
+/**
+  *Extra options menu that returns the option number the user has chosen.
+  */
 //Menu das opções extra que devolve o número da opção que o utilizador escolheu
 int menuExtra(int vet[N][M])
 {
@@ -131,6 +148,9 @@ int menuExtra(int vet[N][M])
     return resposta;
 }
 
+/**
+  * This Function copies the vector given by the user to an auxiliary vector.
+  */
 //Função que copia o vetor dado pelo utilizador para um vetor auxiliar
 void criaVetorAuxiliar(int vetInicial[N][M], int vetAuxiliar[N][M])
 {
@@ -145,6 +165,9 @@ void criaVetorAuxiliar(int vetInicial[N][M], int vetAuxiliar[N][M])
     }
 }
 
+/**
+  * Prints the vector in ascending order.
+  */
 //Imprime o vetor por ordem crescente
 void ordemCrescente(int vet[N][M])
 {
@@ -164,6 +187,9 @@ void ordemCrescente(int vet[N][M])
     }
 }
 
+/**
+  * Calculates the median of the vector elements.
+  */
 //Cálcula a mediana dos elementos do vetor
 void medianaDosElementos(int vet[N][M])
 {
@@ -191,6 +217,9 @@ void medianaDosElementos(int vet[N][M])
     printf("A mediana do conjunto dado é: %.2f\n", mediana);
 }
 
+/**
+  * Multiplies the vector elements by 3.
+  */
 //Multiplica os elementos por 3
 void multiplicaPorTres(int vet[N][M])
 {
@@ -210,6 +239,9 @@ void multiplicaPorTres(int vet[N][M])
     printf("\n");
 }
 
+/**
+  * Creates an auxiliary array to store quadruples and with 2 cycles for, stores everything in an arr[2][N].
+  */
 //Cria um arrAuxiliar para armazenar os quádruplos e com 2 ciclos for, armazena tudo num arr[2][N]
 void matriz2Por18ComQuadruplos(int vet[N][M])
 {
@@ -245,6 +277,9 @@ void matriz2Por18ComQuadruplos(int vet[N][M])
     }
 }
 
+/**
+  * Calculates the logarithm of all elements of the vector.
+  */
 //Calcula o logaritmo de todos os elementos do vetor
 void logaritmoDosElementos(int vet[N][M])
 {
@@ -264,6 +299,9 @@ void logaritmoDosElementos(int vet[N][M])
     printf("\n");
 }
 
+/**
+  * Values ​​of elements that are in multiple positions of 3
+  */
 //Valores dos elementos que estão em posições multiplas de 3
 void valoresDasPosicoesMult3(int vet[N][M])
 {
@@ -280,6 +318,9 @@ void valoresDasPosicoesMult3(int vet[N][M])
     printf("\n");
 }
 
+/**
+  * Reading a new vector, and shows a vector that mixes half of the first vector and half of the second.
+  */
 // Leitura de um novo vetor, e mostra um vetor que mistura metade do primeiro vetor e metade do segundo
 void misturaMetadeVetores(int vet1[N][M])
 {
@@ -320,6 +361,9 @@ void misturaMetadeVetores(int vet1[N][M])
     }
 }
 
+/**
+  * Decompose odd and prime numbers.
+  */
 void decompoeImparesEmPrimos(int vet[N][M])
 {
     int i, j, k, contador, aux, posicao = 0;
@@ -390,6 +434,9 @@ void decompoeImparesEmPrimos(int vet[N][M])
     }
 }
 
+/**
+  * 18 by 18 matrix.
+  */
 void matriz18por18(int vet[N][M], int vet18x18[N][N])
 {
 
@@ -427,6 +474,9 @@ void matriz18por18(int vet[N][M], int vet18x18[N][N])
     }
 }
 
+/**
+  * Transposed from matrix 18 by 18.
+  */
 void transposta18por18(int vet[N][N])
 {
     int transposta[N][N] = {};
@@ -451,6 +501,9 @@ void transposta18por18(int vet[N][N])
     }
 }
 
+/**
+  * Realization of extra features depending on the user's option.
+  */
 //Realização das funcionalidades extra em função da opção do utilizador
 void OpcoesExtra(int vet[N][M])
 {
@@ -512,6 +565,9 @@ void OpcoesExtra(int vet[N][M])
     while (resposta != 0);   //condição para repetir o menu
 }
 
+/**
+  * This is the main function os this program.
+  */
 int main(int argc, char **argv)
 {
     if (argc > 2)
@@ -533,7 +589,7 @@ int main(int argc, char **argv)
             printf("Argumento inválido.\n");
             exit(1);
         }
-        
+
     }
     else
     {

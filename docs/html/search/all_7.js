@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['valoresdasposicoesmult3_17',['valoresDasPosicoesMult3',['../LabsProg_8c.html#acaeeee21001076091f07f11c486f0e11',1,'LabsProg.c']]]
+  ['page_20_2d_20github_20repository_18',['Page - Github Repository',['../Github.html',1,'']]],
+  ['page_20_2d_20description_20of_20the_20project_19',['Page - Description of the Project',['../Project.html',1,'']]]
 ];

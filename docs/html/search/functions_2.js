@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['ordemcrescente_25',['ordemCrescente',['../LabsProg_8c.html#a95425579ca395cc45711b8ff9e816ff7',1,'LabsProg.c']]]
+  ['imprimesocorro_27',['imprimeSocorro',['../main_8c.html#aee703d6141f1e0cdc42ba13d9eff5576',1,'main.c']]]
 ];

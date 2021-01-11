@@ -14,59 +14,46 @@ Include dependency graph for main.\+c\+:
 \doxysubsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{main_8c_a0240ac851181b84ac374872dc5434ee4}\label{main_8c_a0240ac851181b84ac374872dc5434ee4}} 
-\#define {\bfseries N}~18
+\#define \mbox{\hyperlink{main_8c_a0240ac851181b84ac374872dc5434ee4}{N}}~18
 \item 
-\mbox{\Hypertarget{main_8c_a52037c938e3c1b126c6277da5ca689d0}\label{main_8c_a52037c938e3c1b126c6277da5ca689d0}} 
-\#define {\bfseries M}~1
+\#define \mbox{\hyperlink{main_8c_a52037c938e3c1b126c6277da5ca689d0}{M}}~1
 \end{DoxyCompactItemize}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{main_8c_a018db0925c16099439a3610b4bc45f44}\label{main_8c_a018db0925c16099439a3610b4bc45f44}} 
-void {\bfseries limpa\+Input\+Buffer} (void)
+void \mbox{\hyperlink{main_8c_a018db0925c16099439a3610b4bc45f44}{limpa\+Input\+Buffer}} (void)
 \item 
-\mbox{\Hypertarget{main_8c_aee703d6141f1e0cdc42ba13d9eff5576}\label{main_8c_aee703d6141f1e0cdc42ba13d9eff5576}} 
-void {\bfseries imprime\+Socorro} (void)
+void \mbox{\hyperlink{main_8c_aee703d6141f1e0cdc42ba13d9eff5576}{imprime\+Socorro}} (void)
 \item 
-\mbox{\Hypertarget{main_8c_a3e1ff8b22a97ab1721a6b6836e81893f}\label{main_8c_a3e1ff8b22a97ab1721a6b6836e81893f}} 
-int {\bfseries menu\+Principal} (void)
+int \mbox{\hyperlink{main_8c_adf82202a9abfda550ae972e2b2c38c25}{menu\+Principal}} (int vet\mbox{[}\mbox{\hyperlink{main_8c_a0240ac851181b84ac374872dc5434ee4}{N}}\mbox{]}\mbox{[}\mbox{\hyperlink{main_8c_a52037c938e3c1b126c6277da5ca689d0}{M}}\mbox{]})
 \item 
-\mbox{\Hypertarget{main_8c_af31128654504bd4f6e063dfcd23bc6e6}\label{main_8c_af31128654504bd4f6e063dfcd23bc6e6}} 
-void {\bfseries cria\+Vetor\+Auxiliar} (int vet\+Inicial\mbox{[}N\mbox{]}\mbox{[}M\mbox{]}, int vet\+Auxiliar\mbox{[}N\mbox{]}\mbox{[}M\mbox{]})
+int \mbox{\hyperlink{main_8c_a46ba02fcfe3f6e2173c380872237b6e8}{menu\+Extra}} (int vet\mbox{[}\mbox{\hyperlink{main_8c_a0240ac851181b84ac374872dc5434ee4}{N}}\mbox{]}\mbox{[}\mbox{\hyperlink{main_8c_a52037c938e3c1b126c6277da5ca689d0}{M}}\mbox{]})
 \item 
-\mbox{\Hypertarget{main_8c_acae76ca0dfe1eca9d9f6b026a87611d2}\label{main_8c_acae76ca0dfe1eca9d9f6b026a87611d2}} 
-void {\bfseries ordem\+Crescente} (int vet\mbox{[}N\mbox{]}\mbox{[}1\mbox{]})
+void \mbox{\hyperlink{main_8c_af31128654504bd4f6e063dfcd23bc6e6}{cria\+Vetor\+Auxiliar}} (int vet\+Inicial\mbox{[}\mbox{\hyperlink{main_8c_a0240ac851181b84ac374872dc5434ee4}{N}}\mbox{]}\mbox{[}\mbox{\hyperlink{main_8c_a52037c938e3c1b126c6277da5ca689d0}{M}}\mbox{]}, int vet\+Auxiliar\mbox{[}\mbox{\hyperlink{main_8c_a0240ac851181b84ac374872dc5434ee4}{N}}\mbox{]}\mbox{[}\mbox{\hyperlink{main_8c_a52037c938e3c1b126c6277da5ca689d0}{M}}\mbox{]})
 \item 
-\mbox{\Hypertarget{main_8c_a937e06a32352f867b9e6b05152d06862}\label{main_8c_a937e06a32352f867b9e6b05152d06862}} 
-void {\bfseries mediana\+Dos\+Elementos} (int vet\mbox{[}N\mbox{]}\mbox{[}1\mbox{]})
+void \mbox{\hyperlink{main_8c_ab817be196daa42dcd285203ac93c7479}{ordem\+Crescente}} (int vet\mbox{[}\mbox{\hyperlink{main_8c_a0240ac851181b84ac374872dc5434ee4}{N}}\mbox{]}\mbox{[}\mbox{\hyperlink{main_8c_a52037c938e3c1b126c6277da5ca689d0}{M}}\mbox{]})
 \item 
-\mbox{\Hypertarget{main_8c_a11d811432c88d483dd6f28f0abf7bde4}\label{main_8c_a11d811432c88d483dd6f28f0abf7bde4}} 
-void {\bfseries multiplica\+Por\+Tres} (int vet\mbox{[}N\mbox{]}\mbox{[}1\mbox{]})
+void \mbox{\hyperlink{main_8c_a1ed535c9c97ca765302ce2fbf7ec968b}{mediana\+Dos\+Elementos}} (int vet\mbox{[}\mbox{\hyperlink{main_8c_a0240ac851181b84ac374872dc5434ee4}{N}}\mbox{]}\mbox{[}\mbox{\hyperlink{main_8c_a52037c938e3c1b126c6277da5ca689d0}{M}}\mbox{]})
 \item 
-\mbox{\Hypertarget{main_8c_aff6d49fc8e834bad13a46957f042548b}\label{main_8c_aff6d49fc8e834bad13a46957f042548b}} 
-void {\bfseries matriz2\+Por18\+Com\+Quadruplos} (int vet\mbox{[}N\mbox{]}\mbox{[}1\mbox{]})
+void \mbox{\hyperlink{main_8c_a16f4c638e0867415410d603272bf6d94}{multiplica\+Por\+Tres}} (int vet\mbox{[}\mbox{\hyperlink{main_8c_a0240ac851181b84ac374872dc5434ee4}{N}}\mbox{]}\mbox{[}\mbox{\hyperlink{main_8c_a52037c938e3c1b126c6277da5ca689d0}{M}}\mbox{]})
 \item 
-\mbox{\Hypertarget{main_8c_a465bdc36a42065d041346281b22118ad}\label{main_8c_a465bdc36a42065d041346281b22118ad}} 
-void {\bfseries logaritmo\+Dos\+Elementos} (int vet\mbox{[}N\mbox{]}\mbox{[}1\mbox{]})
+void \mbox{\hyperlink{main_8c_a1f4f55950488fc7cd41be3360e2a3cc0}{matriz2\+Por18\+Com\+Quadruplos}} (int vet\mbox{[}\mbox{\hyperlink{main_8c_a0240ac851181b84ac374872dc5434ee4}{N}}\mbox{]}\mbox{[}\mbox{\hyperlink{main_8c_a52037c938e3c1b126c6277da5ca689d0}{M}}\mbox{]})
 \item 
-\mbox{\Hypertarget{main_8c_abdb727a64bc952b7c265540f6f71fdaf}\label{main_8c_abdb727a64bc952b7c265540f6f71fdaf}} 
-void {\bfseries valores\+Das\+Posicoes\+Mult3} (int vet\mbox{[}N\mbox{]}\mbox{[}1\mbox{]})
+void \mbox{\hyperlink{main_8c_a1345b547c5a6f45a5d85f285b97ae17d}{logaritmo\+Dos\+Elementos}} (int vet\mbox{[}\mbox{\hyperlink{main_8c_a0240ac851181b84ac374872dc5434ee4}{N}}\mbox{]}\mbox{[}\mbox{\hyperlink{main_8c_a52037c938e3c1b126c6277da5ca689d0}{M}}\mbox{]})
 \item 
-\mbox{\Hypertarget{main_8c_aa9e924c33d096e7c3e4187f0958b9e4a}\label{main_8c_aa9e924c33d096e7c3e4187f0958b9e4a}} 
-void {\bfseries mistura\+Metade\+Vetores} (int vet1\mbox{[}N\mbox{]}\mbox{[}M\mbox{]})
+void \mbox{\hyperlink{main_8c_a0b76287b88447681f85a00d967fee854}{valores\+Das\+Posicoes\+Mult3}} (int vet\mbox{[}\mbox{\hyperlink{main_8c_a0240ac851181b84ac374872dc5434ee4}{N}}\mbox{]}\mbox{[}\mbox{\hyperlink{main_8c_a52037c938e3c1b126c6277da5ca689d0}{M}}\mbox{]})
 \item 
-\mbox{\Hypertarget{main_8c_a6e80fc904fbb649b3f3f6073c5631cee}\label{main_8c_a6e80fc904fbb649b3f3f6073c5631cee}} 
-void {\bfseries decompoe\+Impares\+Em\+Primos} (int vet\mbox{[}N\mbox{]}\mbox{[}1\mbox{]})
+void \mbox{\hyperlink{main_8c_aa9e924c33d096e7c3e4187f0958b9e4a}{mistura\+Metade\+Vetores}} (int vet1\mbox{[}\mbox{\hyperlink{main_8c_a0240ac851181b84ac374872dc5434ee4}{N}}\mbox{]}\mbox{[}\mbox{\hyperlink{main_8c_a52037c938e3c1b126c6277da5ca689d0}{M}}\mbox{]})
 \item 
-\mbox{\Hypertarget{main_8c_a823344dec95455b9b21f4484832f3fb5}\label{main_8c_a823344dec95455b9b21f4484832f3fb5}} 
-void {\bfseries matriz18por18} (int vet\mbox{[}N\mbox{]}\mbox{[}1\mbox{]}, int vet18x18\mbox{[}N\mbox{]}\mbox{[}N\mbox{]})
+void \mbox{\hyperlink{main_8c_af705b93fa808a56cca1d212918d55427}{decompoe\+Impares\+Em\+Primos}} (int vet\mbox{[}\mbox{\hyperlink{main_8c_a0240ac851181b84ac374872dc5434ee4}{N}}\mbox{]}\mbox{[}\mbox{\hyperlink{main_8c_a52037c938e3c1b126c6277da5ca689d0}{M}}\mbox{]})
 \item 
-\mbox{\Hypertarget{main_8c_abc10ab5c926f34c73ed847d4d5e03ada}\label{main_8c_abc10ab5c926f34c73ed847d4d5e03ada}} 
-void {\bfseries transposta18por18} (int vet\mbox{[}N\mbox{]}\mbox{[}N\mbox{]})
+void \mbox{\hyperlink{main_8c_a667541c1c5f695e29db9ad8e7bb616b5}{matriz18por18}} (int vet\mbox{[}\mbox{\hyperlink{main_8c_a0240ac851181b84ac374872dc5434ee4}{N}}\mbox{]}\mbox{[}\mbox{\hyperlink{main_8c_a52037c938e3c1b126c6277da5ca689d0}{M}}\mbox{]}, int vet18x18\mbox{[}\mbox{\hyperlink{main_8c_a0240ac851181b84ac374872dc5434ee4}{N}}\mbox{]}\mbox{[}\mbox{\hyperlink{main_8c_a0240ac851181b84ac374872dc5434ee4}{N}}\mbox{]})
 \item 
-\mbox{\Hypertarget{main_8c_a3c04138a5bfe5d72780bb7e82a18e627}\label{main_8c_a3c04138a5bfe5d72780bb7e82a18e627}} 
-int {\bfseries main} (int argc, char $\ast$$\ast$argv)
+void \mbox{\hyperlink{main_8c_abc10ab5c926f34c73ed847d4d5e03ada}{transposta18por18}} (int vet\mbox{[}\mbox{\hyperlink{main_8c_a0240ac851181b84ac374872dc5434ee4}{N}}\mbox{]}\mbox{[}\mbox{\hyperlink{main_8c_a0240ac851181b84ac374872dc5434ee4}{N}}\mbox{]})
+\item 
+void \mbox{\hyperlink{main_8c_aa1c437ffd71b78fe2f58c409655c957d}{Opcoes\+Extra}} (int vet\mbox{[}\mbox{\hyperlink{main_8c_a0240ac851181b84ac374872dc5434ee4}{N}}\mbox{]}\mbox{[}\mbox{\hyperlink{main_8c_a52037c938e3c1b126c6277da5ca689d0}{M}}\mbox{]})
+\item 
+int \mbox{\hyperlink{main_8c_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc, char $\ast$$\ast$argv)
 \end{DoxyCompactItemize}
 
 
@@ -90,3 +77,124 @@ This program asks the user 18 numbers that are stored in a vector to provide a w
 Copyright 2021 {\ttfamily Team 13}. All rights reserved. ~\newline
  This project is released under the Apache License 2.\+0. 
 \end{DoxyCopyright}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{main_8c_a0240ac851181b84ac374872dc5434ee4}\label{main_8c_a0240ac851181b84ac374872dc5434ee4}} 
+\index{main.c@{main.c}!N@{N}}
+\index{N@{N}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{N}{N}}
+{\footnotesize\ttfamily \#define N~18}
+
+N is the number of rows of the matrix. \mbox{\Hypertarget{main_8c_a52037c938e3c1b126c6277da5ca689d0}\label{main_8c_a52037c938e3c1b126c6277da5ca689d0}} 
+\index{main.c@{main.c}!M@{M}}
+\index{M@{M}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{M}{M}}
+{\footnotesize\ttfamily \#define M~1}
+
+M is the number os columns of the matrix. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{main_8c_a018db0925c16099439a3610b4bc45f44}\label{main_8c_a018db0925c16099439a3610b4bc45f44}} 
+\index{main.c@{main.c}!limpaInputBuffer@{limpaInputBuffer}}
+\index{limpaInputBuffer@{limpaInputBuffer}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{limpaInputBuffer()}{limpaInputBuffer()}}
+{\footnotesize\ttfamily void limpa\+Input\+Buffer (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Function that clears the input buffer. Useful for clearing \char`\"{}\textbackslash{}n\char`\"{} from the buffer after using the scanf function. \mbox{\Hypertarget{main_8c_aee703d6141f1e0cdc42ba13d9eff5576}\label{main_8c_aee703d6141f1e0cdc42ba13d9eff5576}} 
+\index{main.c@{main.c}!imprimeSocorro@{imprimeSocorro}}
+\index{imprimeSocorro@{imprimeSocorro}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{imprimeSocorro()}{imprimeSocorro()}}
+{\footnotesize\ttfamily void imprime\+Socorro (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+This function shows the user the help menu. \mbox{\Hypertarget{main_8c_adf82202a9abfda550ae972e2b2c38c25}\label{main_8c_adf82202a9abfda550ae972e2b2c38c25}} 
+\index{main.c@{main.c}!menuPrincipal@{menuPrincipal}}
+\index{menuPrincipal@{menuPrincipal}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{menuPrincipal()}{menuPrincipal()}}
+{\footnotesize\ttfamily int menu\+Principal (\begin{DoxyParamCaption}\item[{int}]{vet\mbox{[}\+N\mbox{]}\mbox{[}\+M\mbox{]} }\end{DoxyParamCaption})}
+
+This function shows the user the main menu of the program. \mbox{\Hypertarget{main_8c_a46ba02fcfe3f6e2173c380872237b6e8}\label{main_8c_a46ba02fcfe3f6e2173c380872237b6e8}} 
+\index{main.c@{main.c}!menuExtra@{menuExtra}}
+\index{menuExtra@{menuExtra}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{menuExtra()}{menuExtra()}}
+{\footnotesize\ttfamily int menu\+Extra (\begin{DoxyParamCaption}\item[{int}]{vet\mbox{[}\+N\mbox{]}\mbox{[}\+M\mbox{]} }\end{DoxyParamCaption})}
+
+Extra options menu that returns the option number the user has chosen. \mbox{\Hypertarget{main_8c_af31128654504bd4f6e063dfcd23bc6e6}\label{main_8c_af31128654504bd4f6e063dfcd23bc6e6}} 
+\index{main.c@{main.c}!criaVetorAuxiliar@{criaVetorAuxiliar}}
+\index{criaVetorAuxiliar@{criaVetorAuxiliar}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{criaVetorAuxiliar()}{criaVetorAuxiliar()}}
+{\footnotesize\ttfamily void cria\+Vetor\+Auxiliar (\begin{DoxyParamCaption}\item[{int}]{vet\+Inicial\mbox{[}\+N\mbox{]}\mbox{[}\+M\mbox{]},  }\item[{int}]{vet\+Auxiliar\mbox{[}\+N\mbox{]}\mbox{[}\+M\mbox{]} }\end{DoxyParamCaption})}
+
+This Function copies the vector given by the user to an auxiliary vector. \mbox{\Hypertarget{main_8c_ab817be196daa42dcd285203ac93c7479}\label{main_8c_ab817be196daa42dcd285203ac93c7479}} 
+\index{main.c@{main.c}!ordemCrescente@{ordemCrescente}}
+\index{ordemCrescente@{ordemCrescente}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{ordemCrescente()}{ordemCrescente()}}
+{\footnotesize\ttfamily void ordem\+Crescente (\begin{DoxyParamCaption}\item[{int}]{vet\mbox{[}\+N\mbox{]}\mbox{[}\+M\mbox{]} }\end{DoxyParamCaption})}
+
+Prints the vector in ascending order. \mbox{\Hypertarget{main_8c_a1ed535c9c97ca765302ce2fbf7ec968b}\label{main_8c_a1ed535c9c97ca765302ce2fbf7ec968b}} 
+\index{main.c@{main.c}!medianaDosElementos@{medianaDosElementos}}
+\index{medianaDosElementos@{medianaDosElementos}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{medianaDosElementos()}{medianaDosElementos()}}
+{\footnotesize\ttfamily void mediana\+Dos\+Elementos (\begin{DoxyParamCaption}\item[{int}]{vet\mbox{[}\+N\mbox{]}\mbox{[}\+M\mbox{]} }\end{DoxyParamCaption})}
+
+Calculates the median of the vector elements. \mbox{\Hypertarget{main_8c_a16f4c638e0867415410d603272bf6d94}\label{main_8c_a16f4c638e0867415410d603272bf6d94}} 
+\index{main.c@{main.c}!multiplicaPorTres@{multiplicaPorTres}}
+\index{multiplicaPorTres@{multiplicaPorTres}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{multiplicaPorTres()}{multiplicaPorTres()}}
+{\footnotesize\ttfamily void multiplica\+Por\+Tres (\begin{DoxyParamCaption}\item[{int}]{vet\mbox{[}\+N\mbox{]}\mbox{[}\+M\mbox{]} }\end{DoxyParamCaption})}
+
+Multiplies the vector elements by 3. \mbox{\Hypertarget{main_8c_a1f4f55950488fc7cd41be3360e2a3cc0}\label{main_8c_a1f4f55950488fc7cd41be3360e2a3cc0}} 
+\index{main.c@{main.c}!matriz2Por18ComQuadruplos@{matriz2Por18ComQuadruplos}}
+\index{matriz2Por18ComQuadruplos@{matriz2Por18ComQuadruplos}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{matriz2Por18ComQuadruplos()}{matriz2Por18ComQuadruplos()}}
+{\footnotesize\ttfamily void matriz2\+Por18\+Com\+Quadruplos (\begin{DoxyParamCaption}\item[{int}]{vet\mbox{[}\+N\mbox{]}\mbox{[}\+M\mbox{]} }\end{DoxyParamCaption})}
+
+Creates an auxiliary array to store quadruples and with 2 cycles for, stores everything in an arr\mbox{[}2\mbox{]}\mbox{[}N\mbox{]}. \mbox{\Hypertarget{main_8c_a1345b547c5a6f45a5d85f285b97ae17d}\label{main_8c_a1345b547c5a6f45a5d85f285b97ae17d}} 
+\index{main.c@{main.c}!logaritmoDosElementos@{logaritmoDosElementos}}
+\index{logaritmoDosElementos@{logaritmoDosElementos}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{logaritmoDosElementos()}{logaritmoDosElementos()}}
+{\footnotesize\ttfamily void logaritmo\+Dos\+Elementos (\begin{DoxyParamCaption}\item[{int}]{vet\mbox{[}\+N\mbox{]}\mbox{[}\+M\mbox{]} }\end{DoxyParamCaption})}
+
+Calculates the logarithm of all elements of the vector. \mbox{\Hypertarget{main_8c_a0b76287b88447681f85a00d967fee854}\label{main_8c_a0b76287b88447681f85a00d967fee854}} 
+\index{main.c@{main.c}!valoresDasPosicoesMult3@{valoresDasPosicoesMult3}}
+\index{valoresDasPosicoesMult3@{valoresDasPosicoesMult3}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{valoresDasPosicoesMult3()}{valoresDasPosicoesMult3()}}
+{\footnotesize\ttfamily void valores\+Das\+Posicoes\+Mult3 (\begin{DoxyParamCaption}\item[{int}]{vet\mbox{[}\+N\mbox{]}\mbox{[}\+M\mbox{]} }\end{DoxyParamCaption})}
+
+Values ​​of elements that are in multiple positions of 3 \mbox{\Hypertarget{main_8c_aa9e924c33d096e7c3e4187f0958b9e4a}\label{main_8c_aa9e924c33d096e7c3e4187f0958b9e4a}} 
+\index{main.c@{main.c}!misturaMetadeVetores@{misturaMetadeVetores}}
+\index{misturaMetadeVetores@{misturaMetadeVetores}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{misturaMetadeVetores()}{misturaMetadeVetores()}}
+{\footnotesize\ttfamily void mistura\+Metade\+Vetores (\begin{DoxyParamCaption}\item[{int}]{vet1\mbox{[}\+N\mbox{]}\mbox{[}\+M\mbox{]} }\end{DoxyParamCaption})}
+
+Reading a new vector, and shows a vector that mixes half of the first vector and half of the second. \mbox{\Hypertarget{main_8c_af705b93fa808a56cca1d212918d55427}\label{main_8c_af705b93fa808a56cca1d212918d55427}} 
+\index{main.c@{main.c}!decompoeImparesEmPrimos@{decompoeImparesEmPrimos}}
+\index{decompoeImparesEmPrimos@{decompoeImparesEmPrimos}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{decompoeImparesEmPrimos()}{decompoeImparesEmPrimos()}}
+{\footnotesize\ttfamily void decompoe\+Impares\+Em\+Primos (\begin{DoxyParamCaption}\item[{int}]{vet\mbox{[}\+N\mbox{]}\mbox{[}\+M\mbox{]} }\end{DoxyParamCaption})}
+
+Decompose odd and prime numbers. \mbox{\Hypertarget{main_8c_a667541c1c5f695e29db9ad8e7bb616b5}\label{main_8c_a667541c1c5f695e29db9ad8e7bb616b5}} 
+\index{main.c@{main.c}!matriz18por18@{matriz18por18}}
+\index{matriz18por18@{matriz18por18}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{matriz18por18()}{matriz18por18()}}
+{\footnotesize\ttfamily void matriz18por18 (\begin{DoxyParamCaption}\item[{int}]{vet\mbox{[}\+N\mbox{]}\mbox{[}\+M\mbox{]},  }\item[{int}]{vet18x18\mbox{[}\+N\mbox{]}\mbox{[}\+N\mbox{]} }\end{DoxyParamCaption})}
+
+18 by 18 matrix. \mbox{\Hypertarget{main_8c_abc10ab5c926f34c73ed847d4d5e03ada}\label{main_8c_abc10ab5c926f34c73ed847d4d5e03ada}} 
+\index{main.c@{main.c}!transposta18por18@{transposta18por18}}
+\index{transposta18por18@{transposta18por18}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{transposta18por18()}{transposta18por18()}}
+{\footnotesize\ttfamily void transposta18por18 (\begin{DoxyParamCaption}\item[{int}]{vet\mbox{[}\+N\mbox{]}\mbox{[}\+N\mbox{]} }\end{DoxyParamCaption})}
+
+Transposed from matrix 18 by 18. \mbox{\Hypertarget{main_8c_aa1c437ffd71b78fe2f58c409655c957d}\label{main_8c_aa1c437ffd71b78fe2f58c409655c957d}} 
+\index{main.c@{main.c}!OpcoesExtra@{OpcoesExtra}}
+\index{OpcoesExtra@{OpcoesExtra}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{OpcoesExtra()}{OpcoesExtra()}}
+{\footnotesize\ttfamily void Opcoes\+Extra (\begin{DoxyParamCaption}\item[{int}]{vet\mbox{[}\+N\mbox{]}\mbox{[}\+M\mbox{]} }\end{DoxyParamCaption})}
+
+Realization of extra features depending on the user\textquotesingle{}s option. \mbox{\Hypertarget{main_8c_a3c04138a5bfe5d72780bb7e82a18e627}\label{main_8c_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{main.c@{main.c}!main@{main}}
+\index{main@{main}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+This is the main function os this program. 
