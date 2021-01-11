@@ -399,17 +399,25 @@ void transposta18por18(int vet[N][N])
 //Não pode levar void no argumento por causa do --help
 int main(int argc, char **argv)
 {
-    if (argc < 1 || argc > 2)
+    if (argc > 2)
     {
         printf("Número incorreto de argumentos.\n");
         exit(1);
     }
-    else if (argc == 2 && strcmp(argv[1], "--help") == 0)
+    else if (argc == 2)
     {
+        if (strcmp(argv[1], "--help") == 0)
+        {
         imprimeSocorro();
         printf("Prima 'Enter' para continuar.\n");
         limpaInputBuffer();
         exit(1);
+        }
+        else
+        {
+            printf("Argumento inválido.\n");
+            exit(1);
+        }
     }
     else
     {
