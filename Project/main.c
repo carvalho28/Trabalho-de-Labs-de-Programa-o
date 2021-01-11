@@ -17,6 +17,7 @@
 //To do: -Verficar a função do elemento maior maior; Verificar vetor como argumento (Ou criar função que iguala Aux ao do input)
 
 //Função que limpa o buffer do input. Útil para elminar "\n" do buffer após o uso da função scanf;
+
 void limpaInputBuffer(void)
 {
     while (getchar() != '\n')
