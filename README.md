@@ -1,7 +1,7 @@
 # Trabalho-de-Labs-de-Programacao
-Repositório Geral do Trabalho de Laboratórios de Programação.
+## Repositório Geral do Trabalho de Laboratórios de Programação.
 
-Enunciado do nosso trabalho:
+### Enunciado do nosso trabalho:
 
 O objetivo deste trabalho  é  implementar  um programa que peça ao utilizador 18
 números inteiros e os guarde num vetor, para  posteriormente  providenciar forma
@@ -31,8 +31,8 @@ As funcionalidades mínimas a disponibilizar são as seguintes:
   
 
 
-Uma  versão  mais elaborada  do projeto  deve exibir adicionalmente as seguintes
-características e funcionalidades:
+<b>Uma  versão  mais elaborada  do projeto  deve exibir adicionalmente as seguintes
+características e funcionalidades:</b>
 
 
 
@@ -40,7 +40,7 @@ características e funcionalidades:
       primeiro vetor e metade do segundo;
       
   2 - Apresentação da decomposição em números  primos  dos  números  impares  no
-      vetor inicial;</s>
+      vetor inicial;
       
   3 - Leitura  de  um novo vetor  1x18,  cálculo  e  devolução  da  matriz 18x18
       resultante do produto do vetor inicial com o novo vetor gerado;
@@ -51,5 +51,4 @@ características e funcionalidades:
       sendo a entrada 7 no menu.
       
   6 - O programa  mostra  alguma  ajuda  quando é executado a partir da linha de
-      comandos com a flag --help.
-      
+      comandos com a flag --help.</s>
