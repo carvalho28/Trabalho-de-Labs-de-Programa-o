@@ -40,7 +40,7 @@ características e funcionalidades:
       primeiro vetor e metade do segundo;
       
   2 - Apresentação da decomposição em números  primos  dos  números  impares  no
-      vetor inicial;</s>
+      vetor inicial;
       
   3 - Leitura  de  um novo vetor  1x18,  cálculo  e  devolução  da  matriz 18x18
       resultante do produto do vetor inicial com o novo vetor gerado;
@@ -51,5 +51,4 @@ características e funcionalidades:
       sendo a entrada 7 no menu.
       
   6 - O programa  mostra  alguma  ajuda  quando é executado a partir da linha de
-      comandos com a flag --help.
-      
+      comandos com a flag --help.</s>
