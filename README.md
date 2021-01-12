@@ -15,7 +15,7 @@ pela  ordem  colocadas  neste  enunciado.  Depois de  se  escolher  uma opção,
 resultado deve ser mostrado no ecrã, e o menu deve voltar a ser exibido.
 As funcionalidades mínimas a disponibilizar são as seguintes:
 
-  <s>1 - Devolução do vetor ordenado por ordem crescente;
+  1 - Devolução do vetor ordenado por ordem crescente;
   
   2 - Cálculo da mediana dos elementos no vetor;
   
@@ -27,7 +27,7 @@ As funcionalidades mínimas a disponibilizar são as seguintes:
       
   5 - Cálculo do logaritmo (base natural) de todos os elementos no vetor;
   
-  6 - Devolução dos valores em posições múltiplas de três do vetor.</s>
+  6 - Devolução dos valores em posições múltiplas de três do vetor.
   
 
 
@@ -36,7 +36,7 @@ características e funcionalidades:</b>
 
 
 
-  <s>1 - Leitura de um novo vetor, e devolução de um  vetor que  mistura  metade do
+  1 - Leitura de um novo vetor, e devolução de um  vetor que  mistura  metade do
       primeiro vetor e metade do segundo;
       
   2 - Apresentação da decomposição em números  primos  dos  números  impares  no
@@ -51,4 +51,4 @@ características e funcionalidades:</b>
       sendo a entrada 7 no menu.
       
   6 - O programa  mostra  alguma  ajuda  quando é executado a partir da linha de
-      comandos com a flag --help.</s>
+      comandos com a flag --help.
