@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
+#include "part1.h"
+#include "part2.h"
 
 /**
   * @file main.c
@@ -31,25 +33,6 @@ void limpaInputBuffer(void)
 }
 
 /**
-  * This function shows the user the help menu.
-  */
-//Função do Socorro
-void imprimeSocorro(void)
-{
-    printf("\e[1;1H\e[2J");
-    printf("*****************************\n");
-    printf(" Bem-vindo ao Menu de Ajuda! \n");
-    printf("*****************************\n\n");
-    printf("-> Inicialmente irá ser pedido ao utilizador para inserir valores para a contrução de um vetor;\n");
-    printf("-> Após o input de um vetor, o utilizador tem várias escolhas sobre o que pode fazer com o seu vetor;\n");
-    printf("-> Para cada opção o utilizador deve inserir o número indicado seguido de 'Enter';\n");
-    printf("-> Para sair da escolha anterior pressionar a tecla 'Enter';\n");
-    printf("-> Se desejar inserir outros valores pode fazê-lo, inserindo '9', seguido de 'Enter', no menu principal;\n");
-    printf("-> Para execurtar o programa inserir na linha de comandos ./a.out;");
-    printf("-> Votos de bons cálculos!\n\n");
-}
-
-/**
   * This function shows the user the main menu of the program.
   */
 //Menu principal que devolve o numero da operação a realizar no array
@@ -71,11 +54,11 @@ int menuPrincipal(int vet[N][M])
     printf("0. Sair\n");
 
     printf("\nVetor (em linha):\n(");
-    for(i = 0; i < N; i++)
+    for (i = 0; i < N; i++)
     {
-        for(j = 0; j < M; j++)
+        for (j = 0; j < M; j++)
         {
-            if(i != N-1)
+            if (i != N - 1)
             {
                 printf("%3d, ", vet[i][j]);
             }
@@ -94,8 +77,7 @@ int menuPrincipal(int vet[N][M])
             printf("\nInput inválido! Tente novamente.\n");
         }
         limpaInputBuffer();
-    }
-    while (resposta < 0 || resposta > 9);
+    } while (resposta < 0 || resposta > 9);
     printf("\n");
 
     return resposta;
@@ -118,11 +100,11 @@ int menuExtra(int vet[N][M])
     printf("\n0. Sair\n");
 
     printf("\nVetor (em linha):\n(");
-    for(i = 0; i < N; i++)
+    for (i = 0; i < N; i++)
     {
-        for(j = 0; j < M; j++)
+        for (j = 0; j < M; j++)
         {
-            if(i != N-1)
+            if (i != N - 1)
             {
                 printf("%3d, ", vet[i][j]);
             }
@@ -141,8 +123,7 @@ int menuExtra(int vet[N][M])
             printf("\nInput inválido! Tente novamente.\n");
         }
         limpaInputBuffer();
-    }
-    while (resposta < 0 || resposta > 4);
+    } while (resposta < 0 || resposta > 4);
     printf("\n");
 
     return resposta;
@@ -162,342 +143,6 @@ void criaVetorAuxiliar(int vetInicial[N][M], int vetAuxiliar[N][M])
         {
             vetAuxiliar[i][j] = vetInicial[i][j];
         }
-    }
-}
-
-/**
-  * Prints the vector in ascending order.
-  */
-//Imprime o vetor por ordem crescente
-void ordemCrescente(int vet[N][M])
-{
-    int i, j, aux;
-
-    for (i = 0; i < N; ++i)
-    {
-        for (j = i + 1; j < N; ++j)
-        {
-            if (vet[i][0] > vet[j][0])
-            {
-                aux = vet[i][0];
-                vet[i][0] = vet[j][0];
-                vet[j][0] = aux;
-            }
-        }
-    }
-}
-
-/**
-  * Calculates the median of the vector elements.
-  */
-//Cálcula a mediana dos elementos do vetor
-void medianaDosElementos(int vet[N][M])
-{
-    int i, j, aux;
-    float mediana, soma;
-    //ordemCrescente(vet);
-    // 18 / 2 = 9;
-
-    for (i = 0; i < N; ++i)
-    {
-        for (j = i + 1; j < N; ++j)
-        {
-            if (vet[i][0] > vet[j][0])
-            {
-                aux = vet[i][0];
-                vet[i][0] = vet[j][0];
-                vet[j][0] = aux;
-            }
-        }
-    }
-
-    soma = (vet[8][0] + vet[9][0]); // Como N é par, 18, e a sua metade é ímpar, a mediana é através da soma dos seus valores 'do meio'
-    mediana = soma / 2;
-
-    printf("A mediana do conjunto dado é: %.2f\n", mediana);
-}
-
-/**
-  * Multiplies the vector elements by 3.
-  */
-//Multiplica os elementos por 3
-void multiplicaPorTres(int vet[N][M])
-{
-    int i;
-
-    for (i = 0; i < N; i++)
-    {
-        vet[i][0] = vet[i][0] * 3;
-    }
-
-    //Vetor final:
-    printf("O conjunto dos elementos multiplicados por 3 é: ");
-    for (i = 0; i < N; i++)
-    {
-        printf("%d ", vet[i][0]);
-    }
-    printf("\n");
-}
-
-/**
-  * Creates an auxiliary array to store quadruples and with 2 cycles for, stores everything in an arr[2][N].
-  */
-//Cria um arrAuxiliar para armazenar os quádruplos e com 2 ciclos for, armazena tudo num arr[2][N]
-void matriz2Por18ComQuadruplos(int vet[N][M])
-{
-    int arrVetor[2][N];
-    int i, j;
-
-    for (i = 0; i < 2; i++)
-    {
-        if (i == 0)
-        {
-            for (j = 0; j < N; j++)
-            {
-                arrVetor[i][j] = vet[j][0];
-            }
-        }
-
-        if (i == 1)
-        {
-            for (j = 0; j < N; j++)
-            {
-                arrVetor[i][j] = 4 * vet[j][0];
-            }
-        }
-    }
-
-    for (i = 0; i < 2; i++)
-    {
-        for (j = 0; j < N; j++)
-        {
-            printf("%4d ", arrVetor[i][j]);
-        }
-        printf("\n");
-    }
-}
-
-/**
-  * Calculates the logarithm of all elements of the vector.
-  */
-//Calcula o logaritmo de todos os elementos do vetor
-void logaritmoDosElementos(int vet[N][M])
-{
-    int i;
-    float vetAux[N][M] = {};
-
-    for (i = 0; i < N; i++)
-    {
-        vetAux[i][0] = log(vet[i][0]);
-    }
-
-    printf("O conjunto dos logaritmo de base 10 dos elementos é:\n");
-    for (i = 0; i < N; i++)
-    {
-        printf("%5.2f ", vetAux[i][0]);
-    }
-    printf("\n");
-}
-
-/**
-  * Values ​​of elements that are in multiple positions of 3
-  */
-//Valores dos elementos que estão em posições multiplas de 3
-void valoresDasPosicoesMult3(int vet[N][M])
-{
-    int i;
-
-    printf("O conjunto dos elementos das posições múltiplas de 3 é: ");
-    for (i = 0; i < N; i++)
-    {
-        if (i % 3 == 0 && i != 0)
-        {
-            printf("%d ", vet[i][0]);
-        }
-    }
-    printf("\n");
-}
-
-/**
-  * Reading a new vector, and shows a vector that mixes half of the first vector and half of the second.
-  */
-// Leitura de um novo vetor, e mostra um vetor que mistura metade do primeiro vetor e metade do segundo
-void misturaMetadeVetores(int vet1[N][M])
-{
-    int i, j;
-    int vet2[N][1], vet3[N][1];
-
-    //Segundo Vetor
-    printf("Segundo vetor:\n");
-    for (i = 0; i < N; i++)
-    {
-        do
-        {
-            printf("Posição nº%d: ", i + 1); //Nota verificar se 6 e 28 pertencem a input;
-            if (scanf("%d", &vet2[i][0]) != 1 || vet2[i][0] <= 6 || vet2[i][0] >= 28)
-            {
-                printf("\nInput inválido. Tente novamente.\n");
-            }
-            printf("\n");
-            limpaInputBuffer();
-        }
-        while (vet2[i][0] <= 6 || vet2[i][0] >= 28);
-    }
-
-    for (i = 0; i < N / 2; i++)
-    {
-        vet3[i][0] = vet1[i][0];
-    }
-
-    for (i = N / 2; i < N; i++)
-    {
-        vet3[i][0] = vet2[i][0];
-    }
-
-    printf("O novo vetor com metade do primeiro e metade do segundo é:\n");
-    for (j = 0; j < N; j++)
-    {
-        printf("%d ", vet3[j][0]);
-    }
-}
-
-/**
-  * Decompose odd and prime numbers.
-  */
-void decompoeImparesEmPrimos(int vet[N][M])
-{
-    int i, j, k, contador, aux, posicao = 0;
-    int primos[8] = {};
-    int fatores[10] = {};
-
-    //Armazena os numeros primos maiores que 2 num array, dado que os números a verificar são ímpares
-    for (i = 3; i <= 28; i++)
-    {
-        contador = 0;
-        for (j = 1; j <= 28; j++)
-        {
-            if (i % j == 0)
-            {
-                contador++;
-            }
-        }
-        if (contador == 2)
-        {
-            primos[posicao] = i;
-            posicao++;
-        }
-    }
-
-    for (i = 0; i < N; i++)
-    {
-        aux = 1;
-        contador = -1;
-
-        //Verifica se o número do array é ímpar
-        if (vet[i][0] % 2 != 0)
-        {
-            contador = 0;
-            aux = vet[i][0];
-            for (j = 0; j < 8; j++)
-            {
-                //Guarda os numeros primos pelos quais o ímpar é divisível
-                if (aux % primos[j] == 0)
-                {
-                    fatores[contador] = primos[j];
-                    aux = aux / primos[j];
-                    contador++;
-                    j--;
-                }
-
-                if (aux == 1)
-                {
-                    printf("Decomposição do número %d na posição: %d\n", vet[i][0], i + 1);
-                    for (int k = 0; k < contador; k++)
-                    {
-                        if (k < contador && k != 0)
-                        {
-                            printf(" *");
-                        }
-                        printf(" %d", fatores[k]);
-                    }
-                    printf("\n\n");
-
-                    break;
-                }
-            }
-        }
-    }
-
-    if (contador == -1)
-    {
-        printf("\nNão há números ímpares!\n");
-    }
-}
-
-/**
-  * 18 by 18 matrix.
-  */
-void matriz18por18(int vet[N][M], int vet18x18[N][N])
-{
-
-    int vet3[M][N];
-
-    int i, j, k;
-
-    // Terceiro Vetor
-    printf("Valores do vetor 1x18 pelo qual quer multiplicar o vetor inicial:\n");
-    for (j = 0; j < N; j++)
-    {
-        do
-        {
-            printf("Posição nº%d: ", j + 1); //Nota verificar se 6 e 28 pertencem a input;
-            if (scanf("%d", &vet3[0][j]) != 1 || vet3[0][j] <= 6 || vet3[0][j] >= 28)
-            {
-                printf("\nInput inválido. Tente novamente.\n");
-            }
-            printf("\n");
-            limpaInputBuffer();
-        }
-        while (vet3[0][j] <= 6 || vet3[0][j] >= 28);
-    }
-
-    for (i = 0; i < N; i++)
-    {
-        for (j = 0; j < N; j++)
-        {
-            vet18x18[i][j] = 0;
-            for (k = 0; k < M; k++)
-            {
-                vet18x18[i][j] += vet[i][k] * vet3[k][j];
-            }
-        }
-    }
-}
-
-/**
-  * Transposed from matrix 18 by 18.
-  */
-void transposta18por18(int vet[N][N])
-{
-    int transposta[N][N] = {};
-    int i, j;
-
-    for (i = 0; i < N; i++)
-    {
-        for (j = 0; j < N; j++)
-        {
-            transposta[j][i] = vet[i][j];
-        }
-    }
-
-    printf("\nMatriz transposta da resultante da multiplicação de ambos os vetores:\n");
-    for (i = 0; i < N; i++)
-    {
-        for (j = 0; j < N; j++)
-        {
-            printf("%4d ", transposta[i][j]);
-        }
-        printf("\n");
     }
 }
 
@@ -543,7 +188,7 @@ void OpcoesExtra(int vet[N][M])
             limpaInputBuffer();
             break;
         case 4:
-            if(flag == 0)
+            if (flag == 0)
             {
                 printf("Matriz 18x18 inexistente!\nExecute a opção 3 deste menu para criar uma matriz 18x18.\n");
             }
@@ -561,8 +206,7 @@ void OpcoesExtra(int vet[N][M])
             printf("Input inválido, por favor tente novamente.\n");
             break;
         }
-    }
-    while (resposta != 0);   //condição para repetir o menu
+    } while (resposta != 0); //condição para repetir o menu
 }
 
 /**
@@ -589,7 +233,6 @@ int main(int argc, char **argv)
             printf("Argumento inválido.\n");
             exit(1);
         }
-
     }
     else
     {
@@ -617,8 +260,7 @@ int main(int argc, char **argv)
                     }
                     printf("\n");
                     limpaInputBuffer();
-                }
-                while (vet[i][0] <= 6 || vet[i][0] >= 28);
+                } while (vet[i][0] <= 6 || vet[i][0] >= 28);
             }
 
             do
@@ -680,10 +322,8 @@ int main(int argc, char **argv)
                     printf("Input inválido, por favor tente novamente.\n");
                     break;
                 }
-            }
-            while (resposta_menu != 0 && resposta_menu != 9);   //condição para repetir o menu
-        }
-        while (resposta_menu == 9);
+            } while (resposta_menu != 0 && resposta_menu != 9); //condição para repetir o menu
+        } while (resposta_menu == 9);
     }
 
     return 0;
