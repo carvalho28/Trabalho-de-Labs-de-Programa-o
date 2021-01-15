@@ -1,7 +1,7 @@
 /**
   * @file part2.h
-  * @brief This program asks the user 18 numbers that are stored in a vector to provide a way to calculate some statistics or make operations with those values. The input values should be between 6 and 28.
-  * @version 0.1
+  * @brief This file of the project contains the aditional features developed after the the main options were ready and functional.
+  * @version 0.69420
   * @authors <c>Team 13</c><ul><li>Diogo Carvalho Nº 45716 </li> <li>Eduardo Mendes Nº 45916 </li> <li>Francisco Casais Nº 45465 </li> <li>Guilherme Barata Nº 45779</li> <li>João Marques Nº 45722</li> </ul>
   * @copyright Copyright 2021 <c>Team 13</c>. All rights reserved. \n This project is released under the Apache License 2.0.
   */
@@ -16,9 +16,9 @@
 #define M 1
 
 /**
-  * Reading a new vector, and shows a vector that mixes half of the first vector and half of the second.
+  * @brief Reading a new vector, and shows a vector that mixes half of the first vector and half of the second.
+  * @param vet[N][M] it is the vector created by the user.
   */
-// Leitura de um novo vetor, e mostra um vetor que mistura metade do primeiro vetor e metade do segundo
 void misturaMetadeVetores(int vet1[N][M])
 {
     int i, j;
@@ -59,7 +59,8 @@ void misturaMetadeVetores(int vet1[N][M])
 }
 
 /**
-  * Decompose odd and prime numbers.
+  * @brief Decompose odd and prime numbers.
+  * @param vet[N][M] it is the vector created by the user.
   */
 void decompoeImparesEmPrimos(int vet[N][M])
 {
@@ -132,7 +133,9 @@ void decompoeImparesEmPrimos(int vet[N][M])
 }
 
 /**
-  * 18 by 18 matrix.
+  * @brief 18 by 18 matrix.
+  * @param vet[N][M] it is the vector created by the user;
+  * @param vet18x18[N][N] it is a matrix 18x18.
   */
 void matriz18por18(int vet[N][M], int vet18x18[N][N])
 {
@@ -172,7 +175,8 @@ void matriz18por18(int vet[N][M], int vet18x18[N][N])
 }
 
 /**
-  * Transposed from matrix 18 by 18.
+  * @brief Transposed from matrix 18 by 18.
+  * @param vet[N][M] it is the vector created by the user.
   */
 void transposta18por18(int vet[N][N])
 {
@@ -199,9 +203,8 @@ void transposta18por18(int vet[N][N])
 }
 
 /**
-  * This function shows the user the help menu.
+  * @brief This function shows the user the help menu.
   */
-//Função do Socorro
 void imprimeSocorro(void)
 {
     printf("\e[1;1H\e[2J");

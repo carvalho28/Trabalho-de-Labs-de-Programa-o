@@ -1,7 +1,7 @@
 /**
   * @file part1.h
-  * @brief This program asks the user 18 numbers that are stored in a vector to provide a way to calculate some statistics or make operations with those values. The input values should be between 6 and 28.
-  * @version 0.1
+  * @brief This file of the project contains the main features of the program.
+  * @version 0.69
   * @authors <c>Team 13</c><ul><li>Diogo Carvalho Nº 45716 </li> <li>Eduardo Mendes Nº 45916 </li> <li>Francisco Casais Nº 45465 </li> <li>Guilherme Barata Nº 45779</li> <li>João Marques Nº 45722</li> </ul>
   * @copyright Copyright 2021 <c>Team 13</c>. All rights reserved. \n This project is released under the Apache License 2.0.
   */
@@ -16,9 +16,9 @@
 #define M 1
 
 /**
-  * Prints the vector in ascending order.
+  * @brief Prints the vector in ascending order.
+  * @param vet[N][M] it is the vector created by the user.
   */
-//Imprime o vetor por ordem crescente
 void ordemCrescente(int vet[N][M])
 {
     int i, j, aux;
@@ -38,9 +38,9 @@ void ordemCrescente(int vet[N][M])
 }
 
 /**
-  * Calculates the median of the vector elements.
+  * @brief Calculates the median of the vector elements.
+  * @param vet[N][M] it is the vector created by the user.
   */
-//Cálcula a mediana dos elementos do vetor
 void medianaDosElementos(int vet[N][M])
 {
     int i, j, aux;
@@ -68,9 +68,9 @@ void medianaDosElementos(int vet[N][M])
 }
 
 /**
-  * Multiplies the vector elements by 3.
+  * @brief Multiplies the vector elements by 3.
+  * @param vet[N][M] it is the vector created by the user.
   */
-//Multiplica os elementos por 3
 void multiplicaPorTres(int vet[N][M])
 {
     int i;
@@ -90,9 +90,9 @@ void multiplicaPorTres(int vet[N][M])
 }
 
 /**
-  * Creates an auxiliary array to store quadruples and with 2 cycles for, stores everything in an arr[2][N].
+  * @brief Creates an auxiliary array to store quadruples and with 2 cycles for, stores everything in an arr[2][N].
+  * @param vet[N][M] it is the vector created by the user.
   */
-//Cria um arrAuxiliar para armazenar os quádruplos e com 2 ciclos for, armazena tudo num arr[2][N]
 void matriz2Por18ComQuadruplos(int vet[N][M])
 {
     int arrVetor[2][N];
@@ -128,9 +128,9 @@ void matriz2Por18ComQuadruplos(int vet[N][M])
 }
 
 /**
-  * Calculates the logarithm of all elements of the vector.
+  * @brief Calculates the logarithm of all elements of the vector.
+  * @param vet[N][M] it is the vector created by the user.
   */
-//Calcula o logaritmo de todos os elementos do vetor
 void logaritmoDosElementos(int vet[N][M])
 {
     int i;
@@ -150,9 +150,9 @@ void logaritmoDosElementos(int vet[N][M])
 }
 
 /**
-  * Values ​​of elements that are in multiple positions of 3
+  * @brief Values ​​of elements that are in multiple positions of 3.
+  * @param vet[N][M] it is the vector created by the user.
   */
-//Valores dos elementos que estão em posições multiplas de 3
 void valoresDasPosicoesMult3(int vet[N][M])
 {
     int i;

@@ -1,6 +1,6 @@
 @mainpage <DFN>B1nV3ector</DFN>
 
-Welcome to the main page of the project made by <c>Team 13</c> whose members are Diogo Carvalho Nº 45716, Eduardo Mendes Nº 45916, Francisco Casais  Nº 45465, Guilherme Barata Nº 45779 and João Marques Nº 45722.
+Welcome to the main page of B1nV3ctor, the project made by <c>Team 13</c> whose members are Diogo Carvalho Nº 45716, Eduardo Mendes Nº 45916, Francisco Casais  Nº 45465, Guilherme Barata Nº 45779 and João Marques Nº 45722.
 
 @page Project Page - Description of the Project
 
