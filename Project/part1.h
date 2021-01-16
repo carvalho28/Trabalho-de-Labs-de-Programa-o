@@ -1,7 +1,7 @@
 /**
   * @file part1.h
-  * @brief This file of the project contains the main features of the program.
-  * @version 0.69
+  * @brief This program asks the user 18 numbers that are stored in a vector to provide a way to calculate some statistics or make operations with those values. The input values should be between 6 and 28.
+  * @version 0.1
   * @authors <c>Team 13</c><ul><li>Diogo Carvalho Nº 45716 </li> <li>Eduardo Mendes Nº 45916 </li> <li>Francisco Casais Nº 45465 </li> <li>Guilherme Barata Nº 45779</li> <li>João Marques Nº 45722</li> </ul>
   * @copyright Copyright 2021 <c>Team 13</c>. All rights reserved. \n This project is released under the Apache License 2.0.
   */
@@ -16,10 +16,9 @@
 #define M 1
 
 /**
-  * @brief Prints the vector in ascending order.
-  * @param vet[N][M] it is the vector created by the user.
+  * Prints the vector in ascending order.
   */
-void ordemCrescente(int vet[N][M])
+void ascendingOrder(int vet[N][M])
 {
     int i, j, aux;
 
@@ -38,15 +37,12 @@ void ordemCrescente(int vet[N][M])
 }
 
 /**
-  * @brief Calculates the median of the vector elements.
-  * @param vet[N][M] it is the vector created by the user.
+  * Calculates the median of the vector elements.
   */
-void medianaDosElementos(int vet[N][M])
+void elementsMedian(int vet[N][M])
 {
     int i, j, aux;
     float mediana, soma;
-    //ordemCrescente(vet);
-    // 18 / 2 = 9;
 
     for (i = 0; i < N; ++i)
     {
@@ -61,17 +57,16 @@ void medianaDosElementos(int vet[N][M])
         }
     }
 
-    soma = (vet[8][0] + vet[9][0]); // Como N é par, 18, e a sua metade é ímpar, a mediana é através da soma dos seus valores 'do meio'
+    soma = (vet[8][0] + vet[9][0]); // Since N is even, 18, and half of it is odd, the calculation of the median is done through the sum of the middle numbers
     mediana = soma / 2;
 
-    printf("A mediana do conjunto dado é: %.2f\n", mediana);
+    printf("The set's median is: %.2f\n", mediana);
 }
 
 /**
-  * @brief Multiplies the vector elements by 3.
-  * @param vet[N][M] it is the vector created by the user.
+  * Multiplies the vector elements by 3.
   */
-void multiplicaPorTres(int vet[N][M])
+void multiplyBy3(int vet[N][M])
 {
     int i;
 
@@ -80,8 +75,8 @@ void multiplicaPorTres(int vet[N][M])
         vet[i][0] = vet[i][0] * 3;
     }
 
-    //Vetor final:
-    printf("O conjunto dos elementos multiplicados por 3 é: ");
+    // Final vector
+    printf("The set of elements multiplied by 3 is: ");
     for (i = 0; i < N; i++)
     {
         printf("%d ", vet[i][0]);
@@ -90,10 +85,9 @@ void multiplicaPorTres(int vet[N][M])
 }
 
 /**
-  * @brief Creates an auxiliary array to store quadruples and with 2 cycles for, stores everything in an arr[2][N].
-  * @param vet[N][M] it is the vector created by the user.
+  * Creates an auxiliary array to store quadruples and with 2 cycles for, stores everything in an arr[2][N].
   */
-void matriz2Por18ComQuadruplos(int vet[N][M])
+void matrix2x18Quadruples(int vet[N][M])
 {
     int arrVetor[2][N];
     int i, j;
@@ -128,10 +122,9 @@ void matriz2Por18ComQuadruplos(int vet[N][M])
 }
 
 /**
-  * @brief Calculates the logarithm of all elements of the vector.
-  * @param vet[N][M] it is the vector created by the user.
+  * Calculates the logarithm of all elements of the vector.
   */
-void logaritmoDosElementos(int vet[N][M])
+void elementsLogarithm(int vet[N][M])
 {
     int i;
     float vetAux[N][M] = {};
@@ -141,7 +134,7 @@ void logaritmoDosElementos(int vet[N][M])
         vetAux[i][0] = log(vet[i][0]);
     }
 
-    printf("O conjunto dos logaritmo de base 10 dos elementos é:\n");
+    printf("The natural basis logarithm of all elements is:\n");
     for (i = 0; i < N; i++)
     {
         printf("%5.2f ", vetAux[i][0]);
@@ -150,10 +143,9 @@ void logaritmoDosElementos(int vet[N][M])
 }
 
 /**
-  * @brief Values ​​of elements that are in multiple positions of 3.
-  * @param vet[N][M] it is the vector created by the user.
+  * Values ​​of elements that are in multiple positions of 3
   */
-void valoresDasPosicoesMult3(int vet[N][M])
+void mult3PositionsValues(int vet[N][M])
 {
     int i;
 

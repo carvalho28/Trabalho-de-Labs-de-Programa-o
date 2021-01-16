@@ -25,7 +25,7 @@
 /**
   * @brief Function that clears the input buffer. Useful for clearing "\n" from the buffer after using the scanf function.
   */
-void limpaInputBuffer(void)
+void cleanInputBuffer(void)
 {
     while (getchar() != '\n')
         ;
@@ -35,24 +35,24 @@ void limpaInputBuffer(void)
   * @brief This function shows the user the main menu of the program.
   * @param vet[N][M] it is the vector created by the user.
   */
-int menuPrincipal(int vet[N][M])
+int mainMenu(int vet[N][M])
 {
     int i, j, resposta = -1;
 
     printf("\e[1;1H\e[2J");
-    printf("Menu Principal\n\n");
-    printf("1. Ordenar Vetor por Ordem Crescente\n");
-    printf("2. Mediana dos Elementos do Vetor\n");
-    printf("3. Multiplicar Todos os Elementos do Vetor por 3\n");
-    printf("4. Criar Matriz com Vetor e com Quádruplos\n");
-    printf("5. Cálcular o Logaritmo de Base Natural de Todos os Elementos do Vetor\n");
-    printf("6. Valores das Posições Múltiplas de Três do Vetor\n");
-    printf("7. Ajuda\n");
-    printf("8. Opções Extra\n");
-    printf("\n9. Criar novo vetor\n");
-    printf("0. Sair\n");
+    printf("Main Menu\n\n");
+    printf("1. Sort Vector by Ascending Order\n");
+    printf("2. Median of Vector Elements\n");
+    printf("3. Multiply All Vector Elements by 3\n");
+    printf("4. Create Matrix with Vector and Quadruples\n");
+    printf("5. Calculate the Natural Basis Logarithm of All Vector Elements\n");
+    printf("6. Values of the Multiple of Three Positions of the Vector\n");
+    printf("7. Help\n");
+    printf("8. Additional Options\n");
+    printf("\n9. Create New Vector\n");
+    printf("0. Exit\n");
 
-    printf("\nVetor (em linha):\n(");
+    printf("\nVector (in line):\n(");
     for (i = 0; i < N; i++)
     {
         for (j = 0; j < M; j++)
@@ -73,9 +73,9 @@ int menuPrincipal(int vet[N][M])
     {
         if (scanf("%d", &resposta) != 1 || resposta < 0 || resposta > 9)
         {
-            printf("\nInput inválido! Tente novamente.\n");
+            printf("\nInvalid input. Please try again!\n");
         }
-        limpaInputBuffer();
+        cleanInputBuffer();
     } while (resposta < 0 || resposta > 9);
     printf("\n");
 
@@ -86,19 +86,19 @@ int menuPrincipal(int vet[N][M])
   * @brief Extra options menu that returns the option number the user has chosen.
   * @param vet[N][M] it is the vector created by the user.
   */
-int menuExtra(int vet[N][M])
+int extraMenu(int vet[N][M])
 {
     int i, j, resposta = -1;
 
     printf("\e[1;1H\e[2J");
-    printf("Menu Extra\n\n");
-    printf("1. Misturar Metade do Vetor com Metade de Outro Novo\n");
-    printf("2. Decomposição por Fatores Primos dos elementos Ímpares\n");
-    printf("3. Multiplicar o Vetor Inicial por um Novo (Criar Matriz 18x18)\n");
-    printf("4. Transposta da Matriz 18x18 da Opção Anterior\n");
-    printf("\n0. Sair\n");
+    printf("Additional Options\n\n");
+    printf("1. Mix Half of the Vector with Half of a New One\n");
+    printf("2. Decompose the Odd Elements into Prime Factors\n");
+    printf("3. Multiply the First Vector by a New (Create 18x18 Matrix)\n");
+    printf("4. Previous Option's 18x18 Matrix Transposition\n");
+    printf("\n0. Exit\n");
 
-    printf("\nVetor (em linha):\n(");
+    printf("\nVector (in line):\n(");
     for (i = 0; i < N; i++)
     {
         for (j = 0; j < M; j++)
@@ -119,9 +119,9 @@ int menuExtra(int vet[N][M])
     {
         if (scanf("%d", &resposta) != 1 || resposta < 0 || resposta > 4)
         {
-            printf("\nInput inválido! Tente novamente.\n");
+            printf("\nInvalid input. Please try again!\n");
         }
-        limpaInputBuffer();
+        cleanInputBuffer();
     } while (resposta < 0 || resposta > 4);
     printf("\n");
 
@@ -133,7 +133,7 @@ int menuExtra(int vet[N][M])
   * @param vetInicial it is the initional vector wich was asked to the user;
   * @param vetAuxiliar it is the aditional vector created by the user.
   */
-void criaVetorAuxiliar(int vetInicial[N][M], int vetAuxiliar[N][M])
+void createAuxVec(int vetInicial[N][M], int vetAuxiliar[N][M])
 {
     int i, j;
 
@@ -150,31 +150,31 @@ void criaVetorAuxiliar(int vetInicial[N][M], int vetAuxiliar[N][M])
   * @brief Realization of extra features depending on the user's option.
   * @param vet[N][M] it`s the vector created by the user.
   */
-void OpcoesExtra(int vet[N][M])
+void addOptions(int vet[N][M])
 {
     int vetAux[N][M] = {}, vet18x18[N][N] = {};
     int i, j, resposta = -1, flag = 0;
 
     do
     {
-        criaVetorAuxiliar(vet, vetAux);
-        resposta = menuExtra(vetAux);
+        createAuxVec(vet, vetAux);
+        resposta = extraMenu(vetAux);
 
         switch (resposta)
         {
         case 1:
-            misturaMetadeVetores(vetAux);
-            printf("\nPrima 'Enter' para continuar.\n");
-            limpaInputBuffer();
+            mixHalfVectors(vetAux);
+            printf("\nPress 'Enter' to continue.\n");
+            cleanInputBuffer();
             break;
         case 2:
-            decompoeImparesEmPrimos(vetAux);
-            printf("\nPrima 'Enter' para continuar.\n");
-            limpaInputBuffer();
+            decomposeIntoPrimes(vetAux);
+            printf("\nPress 'Enter' to continue.\n");
+            cleanInputBuffer();
             break;
         case 3:
-            matriz18por18(vetAux, vet18x18);
-            printf("\nMatriz 18x18 multiplicação de ambos os vetores:\n");
+            matrix18x18(vetAux, vet18x18);
+            printf("\n18x18 matrix, product of the two vectors:\n");
             for (i = 0; i < N; i++)
             {
                 for (j = 0; j < N; j++)
@@ -184,29 +184,29 @@ void OpcoesExtra(int vet[N][M])
                 printf("\n");
             }
             flag++;
-            printf("\nPrima 'Enter' para continuar.\n");
-            limpaInputBuffer();
+            printf("\nPress 'Enter' to continue.\n");
+            cleanInputBuffer();
             break;
         case 4:
             if (flag == 0)
             {
-                printf("Matriz 18x18 inexistente!\nExecute a opção 3 deste menu para criar uma matriz 18x18.\n");
+                printf("Nonexistent 18x18 matrix\nSelect option '3' to create a 18x18 matrix.\n");
             }
             else
             {
-                transposta18por18(vet18x18);
+                transpose18x18(vet18x18);
             }
-            printf("\nPrima 'Enter' para continuar.\n");
-            limpaInputBuffer();
+            printf("\nPress 'Enter' to continue.\n");
+            cleanInputBuffer();
             break;
         case 0:
             resposta = 0;
             break;
         default:
-            printf("Input inválido, por favor tente novamente.\n");
+            printf("Invalid input. Please try again!\n");
             break;
         }
-    } while (resposta != 0); //condição para repetir o menu
+    } while (resposta != 0); // menu loop condition
 }
 
 /**
@@ -218,21 +218,21 @@ int main(int argc, char **argv)
 {
     if (argc > 2)
     {
-        printf("Número incorreto de argumentos.\n");
+        printf("Incorrect number of arguments.\n");
         exit(1);
     }
     else if (argc == 2)
     {
         if (strcmp(argv[1], "--help") == 0)
         {
-            imprimeSocorro();
-            printf("Prima 'Enter' para continuar.\n");
-            limpaInputBuffer();
+            printHelp();
+            printf("Press 'Enter' to continue.\n");
+            cleanInputBuffer();
             exit(1);
         }
         else
         {
-            printf("Argumento inválido.\n");
+            printf("Invalid argument.\n");
             exit(1);
         }
     }
@@ -243,11 +243,11 @@ int main(int argc, char **argv)
         int i, j, resposta_menu;
 
         printf("\e[1;1H\e[2J");
-        printf("Seja bem-vindo(a) ao trabalho da Team 13!\n");
-        printf("Este programa vai pedir um vetor ao utilizador e pode apresentar algumas estatisticas ou operações sobre ele.\n");
-        printf("Prima 'Enter' para continuar.\n");
-        limpaInputBuffer();
-        printf("\nInsira 18 números inteiros compreendidos entre 6 e 28:\n");
+        printf("Welcome to Team 13's Project!\n");
+        printf("This program will ask the user to insert a vector and then present some statistics or operations based on it.\n");
+        printf("Press 'Enter' to continue.\n");
+        cleanInputBuffer();
+        printf("\nInsert 18 integer numbers between 6 and 28:\n");
 
         do
         {
@@ -255,64 +255,64 @@ int main(int argc, char **argv)
             {
                 do
                 {
-                    printf("Posição nº%d: ", i + 1); //Nota verificar se 6 e 28 pertencem a input;
+                    printf("Position no. %d: ", i + 1); // Verify if input is between 6 and 28
                     if (scanf("%d", &vet[i][0]) != 1 || vet[i][0] <= 6 || vet[i][0] >= 28)
                     {
-                        printf("\nInput inválido. Tente novamente.\n");
+                        printf("\nInvalid input. Please try again!\n");
                     }
                     printf("\n");
-                    limpaInputBuffer();
+                    cleanInputBuffer();
                 } while (vet[i][0] <= 6 || vet[i][0] >= 28);
             }
 
             do
             {
-                criaVetorAuxiliar(vet, vetAux);
+                createAuxVec(vet, vetAux);
 
-                resposta_menu = menuPrincipal(vetAux);
+                resposta_menu = mainMenu(vetAux);
 
                 switch (resposta_menu)
                 {
                 case 1:
-                    ordemCrescente(vetAux);
-                    printf("O conjunto por ordem crescente é:\n");
+                    ascendingOrder(vetAux);
+                    printf("The set in ascending order is:\n");
                     for (i = 0; i < N; ++i)
                     {
                         printf("%d ", vetAux[i][M - 1]);
                     }
-                    printf("\n\nPrima 'Enter' para continuar.\n");
-                    limpaInputBuffer();
+                    printf("\n\nPress 'Enter' to continue.\n");
+                    cleanInputBuffer();
                     break;
                 case 2:
-                    medianaDosElementos(vetAux);
-                    printf("\nPrima 'Enter' para continuar.\n");
-                    limpaInputBuffer();
+                    elementsMedian(vetAux);
+                    printf("\nPress 'Enter' to continue.\n");
+                    cleanInputBuffer();
                     break;
                 case 3:
-                    multiplicaPorTres(vetAux);
-                    printf("\nPrima 'Enter' para continuar.\n");
-                    limpaInputBuffer();
+                    multiplyBy3(vetAux);
+                    printf("\nPress 'Enter' to continue.\n");
+                    cleanInputBuffer();
                     break;
                 case 4:
-                    matriz2Por18ComQuadruplos(vetAux);
-                    printf("\nPrima 'Enter' para continuar.\n");
-                    limpaInputBuffer();
+                    matrix2x18Quadruples(vetAux);
+                    printf("\nPress 'Enter' to continue.\n");
+                    cleanInputBuffer();
                     break;
                 case 5:
-                    logaritmoDosElementos(vetAux);
-                    printf("\nPrima 'Enter' para continuar.\n");
-                    limpaInputBuffer();
+                    elementsLogarithm(vetAux);
+                    printf("\nPress 'Enter' to continue.\n");
+                    cleanInputBuffer();
                     break;
                 case 6:
-                    valoresDasPosicoesMult3(vetAux);
-                    printf("\nPrima 'Enter' para continuar.\n");
-                    limpaInputBuffer();
+                    mult3PositionsValues(vetAux);
+                    printf("\nPress 'Enter' to continue.\n");
+                    cleanInputBuffer();
                     break;
                 case 7:
-                    imprimeSocorro();
+                    printHelp();
                     break;
                 case 8:
-                    OpcoesExtra(vetAux);
+                    addOptions(vetAux);
                     break;
                 case 9:
                     resposta_menu = 9;
@@ -321,10 +321,10 @@ int main(int argc, char **argv)
                     resposta_menu = 0;
                     break;
                 default:
-                    printf("Input inválido, por favor tente novamente.\n");
+                    printf("Invalid input. Please try again!\n");
                     break;
                 }
-            } while (resposta_menu != 0 && resposta_menu != 9); //condição para repetir o menu
+            } while (resposta_menu != 0 && resposta_menu != 9); // menu loop condition
         } while (resposta_menu == 9);
     }
 
