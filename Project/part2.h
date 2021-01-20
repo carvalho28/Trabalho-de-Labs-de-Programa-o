@@ -208,7 +208,7 @@ void printHelp(void)
     printf(" Welcome to the Help Menu! \n");
     printf("***************************\n\n");
     printf("-> Firstly, the user will be asked to insert values in order to create a vector;\n");
-    printf("-> Then the user can choose what to do it by choosing one of the presented options;\n");
+    printf("-> Then the user can choose what to do by choosing one of the presented options;\n");
     printf("-> To select an option, the user may insert its respective number and then press 'Enter';\n");
     printf("-> To quit from the previous selected option, the user just needs to press 'Enter' again;\n");
     printf("-> It is possible for the user to reset the vector and insert new values by choosing the option 9 on the main menu;\n");
