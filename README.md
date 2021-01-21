@@ -1,5 +1,6 @@
 # B1nV3ctor
-## Version 1.0
+
+**Version 1.0**
 
 B1nV3ctor is the name of a C program made by Team 13.
 It consists of functions around a vector that the user is prompt to input.
