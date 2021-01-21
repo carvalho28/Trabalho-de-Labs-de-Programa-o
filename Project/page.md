@@ -4,7 +4,7 @@ Welcome to the main page of B1nV3ctor, the project made by <c>Team 13</c> whose 
 
 @page Project Page - Description of the Project
 
-This project asks the user for 18 inputs, the 18 inputs are values that  should be between 6 and 28, after the inputs are validated a menu will be shown to the user with a series of options, which are mathematic operations.
+This project asks the user for 18 inputs, the 18 inputs are values that  should be between six and 28, after the inputs are validated a menu will be shown to the user with a series of options, which are mathematic operations.
  \n \n
 @subpage SUB1 \n
 @subpage SUB2
