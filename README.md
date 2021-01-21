@@ -1,54 +1,33 @@
-# Trabalho-de-Labs-de-Programacao
-## Repositório Geral do Trabalho de Laboratórios de Programação.
+# B1nV3ctor
 
-### Enunciado do nosso trabalho:
+B1nV3ctor is the name of a C program made by Team 13.
+It consists of functions around a vector that the user is prompt to input.
 
-O objetivo deste trabalho  é  implementar  um programa que peça ao utilizador 18
-números inteiros e os guarde num vetor, para  posteriormente  providenciar forma
-de calcular algumas estatísticas ou fazer operações sobre esses valores.
-Os valores pedidos devem estar compreendidos entre 6 e 28.
-Deve ser feita a VALIDAÇÃO DE ENTRADA!
+## Installation
 
-Após terem sido pedidos os valores, deve  ser mostrado um menu ao utilizador que
-lhe permita calcular cada  uma  das  estatísticas referidas em baixo, exatamente
-pela  ordem  colocadas  neste  enunciado.  Depois de  se  escolher  uma opção, o
-resultado deve ser mostrado no ecrã, e o menu deve voltar a ser exibido.
-As funcionalidades mínimas a disponibilizar são as seguintes:
+```bash
+gcc b1nv3ctor.c
+./a.out
+```
 
-  1 - Devolução do vetor ordenado por ordem crescente;
-  
-  2 - Cálculo da mediana dos elementos no vetor;
-  
-  3 - Cálculo da multiplicação de todos os elementos no vetor por 3;
-  
-  4 - Construção de uma matriz 18 por 2, em que cada linha é composta pelo vetor
-      lido  (primeira linha)  e  pelo  quádruplo dos respetivos valores (segunda
-      linha);
-      
-  5 - Cálculo do logaritmo (base natural) de todos os elementos no vetor;
-  
-  6 - Devolução dos valores em posições múltiplas de três do vetor.
-  
+## Menus
+
+### Main Menu
+1. Sort Vector by Ascending Order;
+2. Median of Given Vector;
+3. Multiply All Vector Elements by 3;
+4. Create Matrix with Vector and Quadruples;
+5. Natural Base Logarithm of All Vector Elements;
+6. Value of Elements in Positions Multiple of Three;
+7. Help;
+8. Additional Options.
+
+### Additional Menu
+1. Mix Half of the Vector with Half of a New One);
+2. Prime Factorization of the Vector's Odd Numbers;
+3. Multiply the First Vector by a New One (Create 18x18 Matrix);
+4. Previous Option's 18x18 Matrix Transposition.
 
 
-<b>Uma  versão  mais elaborada  do projeto  deve exibir adicionalmente as seguintes
-características e funcionalidades:</b>
-
-
-
-  1 - Leitura de um novo vetor, e devolução de um  vetor que  mistura  metade do
-      primeiro vetor e metade do segundo;
-      
-  2 - Apresentação da decomposição em números  primos  dos  números  impares  no
-      vetor inicial;
-      
-  3 - Leitura  de  um novo vetor  1x18,  cálculo  e  devolução  da  matriz 18x18
-      resultante do produto do vetor inicial com o novo vetor gerado;
-      
-  4 - Cálculo e apresentação da matriz transposta referida no ponto anterior;
-  
-  5 - O programa apresenta  adicionalmente  uma  página de ajuda, acessível como
-      sendo a entrada 7 no menu.
-      
-  6 - O programa  mostra  alguma  ajuda  quando é executado a partir da linha de
-      comandos com a flag --help.
+## License
+[Apache-2.0](http://www.apache.org/licenses/LICENSE-2.0)
