@@ -1,3 +1,4 @@
+# Version 1.0
 # B1nV3ctor
 
 B1nV3ctor is the name of a C program made by Team 13.
@@ -27,7 +28,6 @@ gcc b1nv3ctor.c
 2. Prime Factorization of the Vector's Odd Numbers;
 3. Multiply the First Vector by a New One (Create 18x18 Matrix);
 4. Previous Option's 18x18 Matrix Transposition.
-
 
 ## License
 [Apache-2.0](http://www.apache.org/licenses/LICENSE-2.0)
