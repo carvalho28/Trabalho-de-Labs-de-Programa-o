@@ -10,15 +10,9 @@ Welcome to the main page of B1nV3ctor, the project made by <c>Team 13</c> whose 
 It consists of functions around a vector that the user is prompt to input.
 
 ### Installation
-gcc main.c
-\n
-./a.out
-
-#### or
-
+cd Project/
 make
-\n
-./a.out
+./b1nv3ctor.exe
 
 ## Menus
 ### Main Menu
