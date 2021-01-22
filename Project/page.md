@@ -10,9 +10,11 @@ Welcome to the main page of B1nV3ctor, the project made by <c>Team 13</c> whose 
 It consists of functions around a vector that the user is prompt to input.
 
 ### Installation
+```bash
 cd Project/
 make
 ./b1nv3ctor.exe
+```
 
 ## Menus
 ### Main Menu
