@@ -1,6 +1,54 @@
 @mainpage <DFN>B1nV3ector</DFN>
 
-Welcome to the main page of B1nV3ctor, the project made by <c>Team 13</c> whose members are Diogo Carvalho Nº 45716, Eduardo Mendes Nº 45916, Francisco Casais  Nº 45465, Guilherme Barata Nº 45779 and João Marques Nº 45722.
+Welcome to the main page of B1nV3ctor, the project made by <c>Team 13</c> whose members are:
+* Diogo Carvalho Nº 45716;
+* Eduardo Mendes Nº 45916;
+* Francisco Casais  Nº 45465;
+* Guilherme Barata Nº 45779;
+* João Marques Nº 45722.
+
+It consists of functions around a vector that the user is prompt to input.
+
+### Installation
+gcc main.c
+\n
+./a.out
+
+#### or
+
+make
+\n
+./a.out
+
+## Menus
+### Main Menu
+
+* Sort Vector by Ascending Order;
+
+* Median of Given Vector;
+
+* Multiply All Vector Elements by 3;
+
+* Create Matrix with Vector and Quadruples;
+
+* Natural Base Logarithm of All Vector Elements;
+
+* Value of Elements in Positions Multiple of Three;
+
+* Help;
+
+* Additional Options.
+
+### Additional Menu
+
+* Mix Half of the Vector with Half of a New One);
+
+* Prime Factorization of the Vector's Odd Numbers;
+
+* Multiply the First Vector by a New One (Create 18x18 Matrix);
+
+* Previous Option's 18x18 Matrix Transposition.
+
 
 @page Project Page - Description of the Project
 
