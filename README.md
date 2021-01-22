@@ -8,7 +8,12 @@ It consists of functions around a vector that the user is prompt to input.
 ## Installation
 
 ```bash
-gcc b1nv3ctor.c
+gcc main.c
+./a.out
+```
+## Or
+```bash
+make
 ./a.out
 ```
 
