@@ -7,7 +7,7 @@ It consists of functions around a vector that the user is prompt to input.
 
 ## Installation
 ```bash
-cd /Project
+cd Project/
 make
 ./b1nv3ctor.exe
 ```
