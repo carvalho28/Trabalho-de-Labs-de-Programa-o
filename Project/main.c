@@ -92,13 +92,6 @@ int extraMenu(int vet[N][M])
     int i, j, resposta = -1;
 
     printf("\e[1;1H\e[2J");
-    printf("Additional Options\n\n");
-    printf("1. Mix Half of the Vector with Half of a New One\n");
-    printf("2. Prime Factorization of the Vector's Odd Numbers\n");
-    printf("3. Multiply the First Vector by a New One (Create 18x18 Matrix)\n");
-    printf("4. Previous Option's 18x18 Matrix Transposition\n");
-    printf("\n0. Exit\n");
-
     printf("\nTransposed Matriz:\n[");
     for (i = 0; i < N; i++)
     {
@@ -115,6 +108,14 @@ int extraMenu(int vet[N][M])
         }
     }
     printf("]\n\n");
+    printf("Additional Options\n\n");
+    printf("1. Mix Half of the Vector with Half of a New One\n");
+    printf("2. Prime Factorization of the Vector's Odd Numbers\n");
+    printf("3. Multiply the First Vector by a New One (Create 18x18 Matrix)\n");
+    printf("4. Previous Option's 18x18 Matrix Transposition\n");
+    printf("\n0. Exit\n");
+
+    
 
     do
     {
