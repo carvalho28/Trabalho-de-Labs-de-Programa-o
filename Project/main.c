@@ -41,7 +41,7 @@ int mainMenu(int vet[N][M])
 
     printf("\e[1;1H\e[2J");
 
-    printf("\nTransposed Matriz:\n[");
+    printf("\nVector:\n[");
     for (i = 0; i < N; i++)
     {
         for (j = 0; j < M; j++)
@@ -92,7 +92,7 @@ int extraMenu(int vet[N][M])
     int i, j, resposta = -1;
 
     printf("\e[1;1H\e[2J");
-    printf("\nTransposed Matriz:\n[");
+    printf("\nVector:\n[");
     for (i = 0; i < N; i++)
     {
         for (j = 0; j < M; j++)
