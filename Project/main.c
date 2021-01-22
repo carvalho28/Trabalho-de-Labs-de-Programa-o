@@ -41,7 +41,7 @@ int mainMenu(int vet[N][M])
 
     printf("\e[1;1H\e[2J");
 
-    printf("\nTransposed Matriz:\n");
+    printf("\nTransposed Matriz:\n[");
     for (i = 0; i < N; i++)
     {
         for (j = 0; j < M; j++)
@@ -56,7 +56,7 @@ int mainMenu(int vet[N][M])
             }
         }
     }
-    printf("\n\n");
+    printf("]\n\n");
 
     printf("Main Menu\n\n");
     printf("1. Sort Vector by Ascending Order\n");
@@ -99,7 +99,7 @@ int extraMenu(int vet[N][M])
     printf("4. Previous Option's 18x18 Matrix Transposition\n");
     printf("\n0. Exit\n");
 
-    printf("\nVector (in a line):\n(");
+    printf("\nTransposed Matriz:\n[");
     for (i = 0; i < N; i++)
     {
         for (j = 0; j < M; j++)
@@ -114,7 +114,7 @@ int extraMenu(int vet[N][M])
             }
         }
     }
-    printf(" )\n\n");
+    printf("]\n\n");
 
     do
     {
