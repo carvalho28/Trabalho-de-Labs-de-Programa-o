@@ -7,7 +7,7 @@ Welcome to the main page of B1nV3ctor, the project made by <c>Team 13</c> whose 
 * Guilherme Barata Nº 45779;
 * João Marques Nº 45722.
 
-It consists of functions around a vector that the user is prompt to input.
+The program consists of functions around a vector that the user is prompt to input.
 
 ### Installation
 ```bash
