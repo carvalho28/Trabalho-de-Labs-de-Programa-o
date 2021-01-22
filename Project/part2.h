@@ -62,7 +62,8 @@ void mixHalfVectors(int vet1[N][M])
   */
 void OddPrimeFactoring(int vet[N][M])
 {
-    int i, j, k, contador, aux, posicao = 0;
+    int i, j, contador, aux, posicao = 0;
+    // int k;
     int primos[8] = {};
     int fatores[10] = {};
 

@@ -40,19 +40,8 @@ int mainMenu(int vet[N][M])
     int i, j, resposta = -1;
 
     printf("\e[1;1H\e[2J");
-    printf("Main Menu\n\n");
-    printf("1. Sort Vector by Ascending Order\n");
-    printf("2. Median of Given Vector\n");
-    printf("3. Multiply All Vector Elements by 3\n");
-    printf("4. Create Matrix with Vector and Quadruples\n");
-    printf("5. Natural Base Logarithm of All Vector Elements\n");
-    printf("6. Value of Elements in Positions Multiple of Three\n");
-    printf("7. Help\n");
-    printf("8. Additional Options\n");
-    printf("\n9. Create New Vector\n");
-    printf("0. Exit\n");
 
-    printf("\nVector (in a line):\n(");
+    printf("\nTransposed Matriz:\n");
     for (i = 0; i < N; i++)
     {
         for (j = 0; j < M; j++)
@@ -67,7 +56,19 @@ int mainMenu(int vet[N][M])
             }
         }
     }
-    printf(" )\n\n");
+    printf("\n\n");
+
+    printf("Main Menu\n\n");
+    printf("1. Sort Vector by Ascending Order\n");
+    printf("2. Median of Given Vector\n");
+    printf("3. Multiply All Vector Elements by 3\n");
+    printf("4. Create Matrix with Vector and Quadruples\n");
+    printf("5. Natural Base Logarithm of All Vector Elements\n");
+    printf("6. Value of Elements in Positions Multiple of Three\n");
+    printf("7. Help\n");
+    printf("8. Additional Options\n");
+    printf("\n9. Create New Vector\n");
+    printf("0. Exit\n");
 
     do
     {
@@ -239,8 +240,9 @@ int main(int argc, char **argv)
     else
     {
         int vet[N][M] = {}, vetAux[N][M] = {};
-        int vet18x18[N][N] = {};
-        int i, j, resposta_menu;
+        // int vet18x18[N][N] = {};
+        int i, resposta_menu;
+        // int j;
 
         printf("\e[1;1H\e[2J");
         printf("Welcome to Team 13's Project!\n");
