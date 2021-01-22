@@ -6,15 +6,9 @@ B1nV3ctor is the name of a C program made by Team 13.
 It consists of functions around a vector that the user is prompt to input.
 
 ## Installation
-
-```bash
-gcc main.c
-./a.out
-```
-## Or
 ```bash
 make
-./a.out
+./b1nv3ctor.exe
 ```
 
 ## Menus
