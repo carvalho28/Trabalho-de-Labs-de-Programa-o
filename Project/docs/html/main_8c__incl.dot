@@ -13,7 +13,7 @@ digraph "main.c"
   Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
   Node5 [label="math.h",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
   Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
-  Node6 [label="part1.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$part1_8h.html",tooltip="This file of the project contains the main features of the program."];
+  Node6 [label="part1.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$part1_8h.html",tooltip="This program asks the user 18 numbers that are stored in a vector to provide a way to calculate some ..."];
   Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
-  Node7 [label="part2.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$part2_8h.html",tooltip="This file of the project contains the aditional features developed after the the main options were re..."];
+  Node7 [label="part2.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$part2_8h.html",tooltip="This program asks the user 18 numbers that are stored in a vector to provide a way to calculate some ..."];
 }

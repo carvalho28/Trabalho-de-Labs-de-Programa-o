@@ -23,16 +23,16 @@ Include dependency graph for main.\+c\+:
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{main_8c_a018db0925c16099439a3610b4bc45f44}\label{main_8c_a018db0925c16099439a3610b4bc45f44}} 
-void \mbox{\hyperlink{main_8c_a018db0925c16099439a3610b4bc45f44}{limpa\+Input\+Buffer}} (void)
+\mbox{\Hypertarget{main_8c_a586bcc303f422f4de1a151735cbf39f1}\label{main_8c_a586bcc303f422f4de1a151735cbf39f1}} 
+void \mbox{\hyperlink{main_8c_a586bcc303f422f4de1a151735cbf39f1}{clean\+Input\+Buffer}} (void)
 \begin{DoxyCompactList}\small\item\em Function that clears the input buffer. Useful for clearing \char`\"{}\textbackslash{}n\char`\"{} from the buffer after using the scanf function. \end{DoxyCompactList}\item 
-int \mbox{\hyperlink{main_8c_adf82202a9abfda550ae972e2b2c38c25}{menu\+Principal}} (int vet\mbox{[}\mbox{\hyperlink{part2_8h_a0240ac851181b84ac374872dc5434ee4}{N}}\mbox{]}\mbox{[}\mbox{\hyperlink{part2_8h_a52037c938e3c1b126c6277da5ca689d0}{M}}\mbox{]})
+int \mbox{\hyperlink{main_8c_aa07699fc6fe92cfdde7824fcc31bf788}{main\+Menu}} (int vet\mbox{[}\mbox{\hyperlink{part2_8h_a0240ac851181b84ac374872dc5434ee4}{N}}\mbox{]}\mbox{[}\mbox{\hyperlink{part2_8h_a52037c938e3c1b126c6277da5ca689d0}{M}}\mbox{]})
 \begin{DoxyCompactList}\small\item\em This function shows the user the main menu of the program. \end{DoxyCompactList}\item 
-int \mbox{\hyperlink{main_8c_a46ba02fcfe3f6e2173c380872237b6e8}{menu\+Extra}} (int vet\mbox{[}\mbox{\hyperlink{part2_8h_a0240ac851181b84ac374872dc5434ee4}{N}}\mbox{]}\mbox{[}\mbox{\hyperlink{part2_8h_a52037c938e3c1b126c6277da5ca689d0}{M}}\mbox{]})
+int \mbox{\hyperlink{main_8c_a213d6c211217d34836c1e9215fad6839}{extra\+Menu}} (int vet\mbox{[}\mbox{\hyperlink{part2_8h_a0240ac851181b84ac374872dc5434ee4}{N}}\mbox{]}\mbox{[}\mbox{\hyperlink{part2_8h_a52037c938e3c1b126c6277da5ca689d0}{M}}\mbox{]})
 \begin{DoxyCompactList}\small\item\em Extra options menu that returns the option number the user has chosen. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{main_8c_af31128654504bd4f6e063dfcd23bc6e6}{cria\+Vetor\+Auxiliar}} (int vet\+Inicial\mbox{[}\mbox{\hyperlink{part2_8h_a0240ac851181b84ac374872dc5434ee4}{N}}\mbox{]}\mbox{[}\mbox{\hyperlink{part2_8h_a52037c938e3c1b126c6277da5ca689d0}{M}}\mbox{]}, int vet\+Auxiliar\mbox{[}\mbox{\hyperlink{part2_8h_a0240ac851181b84ac374872dc5434ee4}{N}}\mbox{]}\mbox{[}\mbox{\hyperlink{part2_8h_a52037c938e3c1b126c6277da5ca689d0}{M}}\mbox{]})
+void \mbox{\hyperlink{main_8c_abdac0b2a55a2674fc4f159dd72ccb28a}{create\+Aux\+Vec}} (int vet\+Inicial\mbox{[}\mbox{\hyperlink{part2_8h_a0240ac851181b84ac374872dc5434ee4}{N}}\mbox{]}\mbox{[}\mbox{\hyperlink{part2_8h_a52037c938e3c1b126c6277da5ca689d0}{M}}\mbox{]}, int vet\+Auxiliar\mbox{[}\mbox{\hyperlink{part2_8h_a0240ac851181b84ac374872dc5434ee4}{N}}\mbox{]}\mbox{[}\mbox{\hyperlink{part2_8h_a52037c938e3c1b126c6277da5ca689d0}{M}}\mbox{]})
 \begin{DoxyCompactList}\small\item\em This Function copies the vector given by the user to an auxiliary vector. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{main_8c_aa1c437ffd71b78fe2f58c409655c957d}{Opcoes\+Extra}} (int vet\mbox{[}\mbox{\hyperlink{part2_8h_a0240ac851181b84ac374872dc5434ee4}{N}}\mbox{]}\mbox{[}\mbox{\hyperlink{part2_8h_a52037c938e3c1b126c6277da5ca689d0}{M}}\mbox{]})
+void \mbox{\hyperlink{main_8c_adf26de30709eca0ce5a7335f9f1cf936}{extra\+Options}} (int vet\mbox{[}\mbox{\hyperlink{part2_8h_a0240ac851181b84ac374872dc5434ee4}{N}}\mbox{]}\mbox{[}\mbox{\hyperlink{part2_8h_a52037c938e3c1b126c6277da5ca689d0}{M}}\mbox{]})
 \begin{DoxyCompactList}\small\item\em Realization of extra features depending on the user\textquotesingle{}s option. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{main_8c_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc, char $\ast$$\ast$argv)
 \begin{DoxyCompactList}\small\item\em This is the main function os this program. \end{DoxyCompactList}\end{DoxyCompactItemize}
@@ -42,7 +42,7 @@ int \mbox{\hyperlink{main_8c_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc
 This file contains the main function, adtional features and menus of the program. 
 
 \begin{DoxyVersion}{Version}
-0.\+420 
+1.\+00 
 \end{DoxyVersion}
 \begin{DoxyAuthor}{Authors}
 {\ttfamily Team 13}
@@ -73,14 +73,14 @@ N is the number of rows of the matrix. \mbox{\Hypertarget{main_8c_a52037c938e3c1
 \doxysubsubsection{\texorpdfstring{M}{M}}
 {\footnotesize\ttfamily \#define M~1}
 
-M is the number os columns of the matrix. 
+M is the number of columns of the matrix. 
 
 \doxysubsection{Function Documentation}
-\mbox{\Hypertarget{main_8c_adf82202a9abfda550ae972e2b2c38c25}\label{main_8c_adf82202a9abfda550ae972e2b2c38c25}} 
-\index{main.c@{main.c}!menuPrincipal@{menuPrincipal}}
-\index{menuPrincipal@{menuPrincipal}!main.c@{main.c}}
-\doxysubsubsection{\texorpdfstring{menuPrincipal()}{menuPrincipal()}}
-{\footnotesize\ttfamily int menu\+Principal (\begin{DoxyParamCaption}\item[{int}]{vet\mbox{[}\+N\mbox{]}\mbox{[}\+M\mbox{]} }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{main_8c_aa07699fc6fe92cfdde7824fcc31bf788}\label{main_8c_aa07699fc6fe92cfdde7824fcc31bf788}} 
+\index{main.c@{main.c}!mainMenu@{mainMenu}}
+\index{mainMenu@{mainMenu}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{mainMenu()}{mainMenu()}}
+{\footnotesize\ttfamily int main\+Menu (\begin{DoxyParamCaption}\item[{int}]{vet\mbox{[}\+N\mbox{]}\mbox{[}\+M\mbox{]} }\end{DoxyParamCaption})}
 
 
 
@@ -91,11 +91,11 @@ This function shows the user the main menu of the program.
 {\em vet\mbox{[}\+N\mbox{]}\mbox{[}\+M\mbox{]}} & it is the vector created by the user. \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{main_8c_a46ba02fcfe3f6e2173c380872237b6e8}\label{main_8c_a46ba02fcfe3f6e2173c380872237b6e8}} 
-\index{main.c@{main.c}!menuExtra@{menuExtra}}
-\index{menuExtra@{menuExtra}!main.c@{main.c}}
-\doxysubsubsection{\texorpdfstring{menuExtra()}{menuExtra()}}
-{\footnotesize\ttfamily int menu\+Extra (\begin{DoxyParamCaption}\item[{int}]{vet\mbox{[}\+N\mbox{]}\mbox{[}\+M\mbox{]} }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{main_8c_a213d6c211217d34836c1e9215fad6839}\label{main_8c_a213d6c211217d34836c1e9215fad6839}} 
+\index{main.c@{main.c}!extraMenu@{extraMenu}}
+\index{extraMenu@{extraMenu}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{extraMenu()}{extraMenu()}}
+{\footnotesize\ttfamily int extra\+Menu (\begin{DoxyParamCaption}\item[{int}]{vet\mbox{[}\+N\mbox{]}\mbox{[}\+M\mbox{]} }\end{DoxyParamCaption})}
 
 
 
@@ -106,11 +106,11 @@ Extra options menu that returns the option number the user has chosen.
 {\em vet\mbox{[}\+N\mbox{]}\mbox{[}\+M\mbox{]}} & it is the vector created by the user. \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{main_8c_af31128654504bd4f6e063dfcd23bc6e6}\label{main_8c_af31128654504bd4f6e063dfcd23bc6e6}} 
-\index{main.c@{main.c}!criaVetorAuxiliar@{criaVetorAuxiliar}}
-\index{criaVetorAuxiliar@{criaVetorAuxiliar}!main.c@{main.c}}
-\doxysubsubsection{\texorpdfstring{criaVetorAuxiliar()}{criaVetorAuxiliar()}}
-{\footnotesize\ttfamily void cria\+Vetor\+Auxiliar (\begin{DoxyParamCaption}\item[{int}]{vet\+Inicial\mbox{[}\+N\mbox{]}\mbox{[}\+M\mbox{]},  }\item[{int}]{vet\+Auxiliar\mbox{[}\+N\mbox{]}\mbox{[}\+M\mbox{]} }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{main_8c_abdac0b2a55a2674fc4f159dd72ccb28a}\label{main_8c_abdac0b2a55a2674fc4f159dd72ccb28a}} 
+\index{main.c@{main.c}!createAuxVec@{createAuxVec}}
+\index{createAuxVec@{createAuxVec}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{createAuxVec()}{createAuxVec()}}
+{\footnotesize\ttfamily void create\+Aux\+Vec (\begin{DoxyParamCaption}\item[{int}]{vet\+Inicial\mbox{[}\+N\mbox{]}\mbox{[}\+M\mbox{]},  }\item[{int}]{vet\+Auxiliar\mbox{[}\+N\mbox{]}\mbox{[}\+M\mbox{]} }\end{DoxyParamCaption})}
 
 
 
@@ -123,11 +123,11 @@ This Function copies the vector given by the user to an auxiliary vector.
 {\em vet\+Auxiliar} & it is the aditional vector created by the user. \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{main_8c_aa1c437ffd71b78fe2f58c409655c957d}\label{main_8c_aa1c437ffd71b78fe2f58c409655c957d}} 
-\index{main.c@{main.c}!OpcoesExtra@{OpcoesExtra}}
-\index{OpcoesExtra@{OpcoesExtra}!main.c@{main.c}}
-\doxysubsubsection{\texorpdfstring{OpcoesExtra()}{OpcoesExtra()}}
-{\footnotesize\ttfamily void Opcoes\+Extra (\begin{DoxyParamCaption}\item[{int}]{vet\mbox{[}\+N\mbox{]}\mbox{[}\+M\mbox{]} }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{main_8c_adf26de30709eca0ce5a7335f9f1cf936}\label{main_8c_adf26de30709eca0ce5a7335f9f1cf936}} 
+\index{main.c@{main.c}!extraOptions@{extraOptions}}
+\index{extraOptions@{extraOptions}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{extraOptions()}{extraOptions()}}
+{\footnotesize\ttfamily void extra\+Options (\begin{DoxyParamCaption}\item[{int}]{vet\mbox{[}\+N\mbox{]}\mbox{[}\+M\mbox{]} }\end{DoxyParamCaption})}
 
 
 

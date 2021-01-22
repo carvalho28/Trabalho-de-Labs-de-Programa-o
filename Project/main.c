@@ -240,12 +240,10 @@ int main(int argc, char **argv)
     else
     {
         int vet[N][M] = {}, vetAux[N][M] = {};
-        // int vet18x18[N][N] = {};
         int i, resposta_menu;
-        // int j;
 
         printf("\e[1;1H\e[2J");
-        printf("Welcome to Team 13's Project!\n");
+        printf("Welcome to B1nV3ctor!\n");
         printf("This program will ask the user to insert a vector and then present some statistics or operations using it.\n");
         printf("Press 'Enter' to continue.\n");
         cleanInputBuffer();

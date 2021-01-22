@@ -6,12 +6,12 @@ SOURCEFILES = main.c part1.h part2.h
 
 .PHONY: all clean
 
-all: team13.exe doxy
+all: b1nv3ctor.exe doxy
 
 # Generates an executable project file
-team13.exe: main.o
+b1nv3ctor.exe: main.o
 	@$(COMPILER) -o $@ $< -lm
-	@echo "team13.exe executable file created successfully."
+	@echo "b1nv3ctor.exe executable file created successfully."
 
 # Generates Doxygen config file and HTML page
 doxy: $(SOURCEFILES)

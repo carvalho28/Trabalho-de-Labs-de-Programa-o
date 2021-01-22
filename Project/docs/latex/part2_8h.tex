@@ -2,7 +2,7 @@
 \label{part2_8h}\index{part2.h@{part2.h}}
 
 
-This file of the project contains the aditional features developed after the the main options were ready and functional.  
+This program asks the user 18 numbers that are stored in a vector to provide a way to calculate some statistics or make operations with those values. The input values should be integers between 6 and 28.  
 
 
 This graph shows which files directly or indirectly include this file\+:
@@ -17,24 +17,23 @@ This graph shows which files directly or indirectly include this file\+:
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{part2_8h_aa9e924c33d096e7c3e4187f0958b9e4a}{mistura\+Metade\+Vetores}} (int vet1\mbox{[}\mbox{\hyperlink{part2_8h_a0240ac851181b84ac374872dc5434ee4}{N}}\mbox{]}\mbox{[}\mbox{\hyperlink{part2_8h_a52037c938e3c1b126c6277da5ca689d0}{M}}\mbox{]})
-\begin{DoxyCompactList}\small\item\em Reading a new vector, and shows a vector that mixes half of the first vector and half of the second. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{part2_8h_af705b93fa808a56cca1d212918d55427}{decompoe\+Impares\+Em\+Primos}} (int vet\mbox{[}\mbox{\hyperlink{part2_8h_a0240ac851181b84ac374872dc5434ee4}{N}}\mbox{]}\mbox{[}\mbox{\hyperlink{part2_8h_a52037c938e3c1b126c6277da5ca689d0}{M}}\mbox{]})
-\begin{DoxyCompactList}\small\item\em Decompose odd and prime numbers. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{part2_8h_a667541c1c5f695e29db9ad8e7bb616b5}{matriz18por18}} (int vet\mbox{[}\mbox{\hyperlink{part2_8h_a0240ac851181b84ac374872dc5434ee4}{N}}\mbox{]}\mbox{[}\mbox{\hyperlink{part2_8h_a52037c938e3c1b126c6277da5ca689d0}{M}}\mbox{]}, int vet18x18\mbox{[}\mbox{\hyperlink{part2_8h_a0240ac851181b84ac374872dc5434ee4}{N}}\mbox{]}\mbox{[}\mbox{\hyperlink{part2_8h_a0240ac851181b84ac374872dc5434ee4}{N}}\mbox{]})
-\begin{DoxyCompactList}\small\item\em 18 by 18 matrix. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{part2_8h_abc10ab5c926f34c73ed847d4d5e03ada}{transposta18por18}} (int vet\mbox{[}\mbox{\hyperlink{part2_8h_a0240ac851181b84ac374872dc5434ee4}{N}}\mbox{]}\mbox{[}\mbox{\hyperlink{part2_8h_a0240ac851181b84ac374872dc5434ee4}{N}}\mbox{]})
-\begin{DoxyCompactList}\small\item\em Transposed from matrix 18 by 18. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{part2_8h_aee703d6141f1e0cdc42ba13d9eff5576}\label{part2_8h_aee703d6141f1e0cdc42ba13d9eff5576}} 
-void \mbox{\hyperlink{part2_8h_aee703d6141f1e0cdc42ba13d9eff5576}{imprime\+Socorro}} (void)
-\begin{DoxyCompactList}\small\item\em This function shows the user the help menu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+void \mbox{\hyperlink{part2_8h_ae5a16053c43d552c2ffd05f6f5ce9059}{mix\+Half\+Vectors}} (int vet1\mbox{[}\mbox{\hyperlink{part2_8h_a0240ac851181b84ac374872dc5434ee4}{N}}\mbox{]}\mbox{[}\mbox{\hyperlink{part2_8h_a52037c938e3c1b126c6277da5ca689d0}{M}}\mbox{]})
+\item 
+void \mbox{\hyperlink{part2_8h_a0436ab4f13b54779e42cd9045207a699}{Odd\+Prime\+Factoring}} (int vet\mbox{[}\mbox{\hyperlink{part2_8h_a0240ac851181b84ac374872dc5434ee4}{N}}\mbox{]}\mbox{[}\mbox{\hyperlink{part2_8h_a52037c938e3c1b126c6277da5ca689d0}{M}}\mbox{]})
+\item 
+void \mbox{\hyperlink{part2_8h_a75438b1cdfcdbe0a22279b21bbb541fc}{matrix18x18}} (int vet\mbox{[}\mbox{\hyperlink{part2_8h_a0240ac851181b84ac374872dc5434ee4}{N}}\mbox{]}\mbox{[}\mbox{\hyperlink{part2_8h_a52037c938e3c1b126c6277da5ca689d0}{M}}\mbox{]}, int vet18x18\mbox{[}\mbox{\hyperlink{part2_8h_a0240ac851181b84ac374872dc5434ee4}{N}}\mbox{]}\mbox{[}\mbox{\hyperlink{part2_8h_a0240ac851181b84ac374872dc5434ee4}{N}}\mbox{]})
+\item 
+void \mbox{\hyperlink{part2_8h_aa8cf062e466473e5a5c5632c49e3b0c8}{transpose18x18}} (int vet\mbox{[}\mbox{\hyperlink{part2_8h_a0240ac851181b84ac374872dc5434ee4}{N}}\mbox{]}\mbox{[}\mbox{\hyperlink{part2_8h_a0240ac851181b84ac374872dc5434ee4}{N}}\mbox{]})
+\item 
+void \mbox{\hyperlink{part2_8h_ae19e0a10c9b6b5aaf1878cac27ea9541}{print\+Help}} (void)
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-This file of the project contains the aditional features developed after the the main options were ready and functional. 
+This program asks the user 18 numbers that are stored in a vector to provide a way to calculate some statistics or make operations with those values. The input values should be integers between 6 and 28. 
 
 \begin{DoxyVersion}{Version}
-0.\+69420 
+1.\+00 
 \end{DoxyVersion}
 \begin{DoxyAuthor}{Authors}
 {\ttfamily Team 13}
@@ -65,68 +64,37 @@ N is the number of rows of the matrix. \mbox{\Hypertarget{part2_8h_a52037c938e3c
 \doxysubsubsection{\texorpdfstring{M}{M}}
 {\footnotesize\ttfamily \#define M~1}
 
-M is the number os columns of the matrix. 
+M is the number of columns of the matrix. 
 
 \doxysubsection{Function Documentation}
-\mbox{\Hypertarget{part2_8h_aa9e924c33d096e7c3e4187f0958b9e4a}\label{part2_8h_aa9e924c33d096e7c3e4187f0958b9e4a}} 
-\index{part2.h@{part2.h}!misturaMetadeVetores@{misturaMetadeVetores}}
-\index{misturaMetadeVetores@{misturaMetadeVetores}!part2.h@{part2.h}}
-\doxysubsubsection{\texorpdfstring{misturaMetadeVetores()}{misturaMetadeVetores()}}
-{\footnotesize\ttfamily void mistura\+Metade\+Vetores (\begin{DoxyParamCaption}\item[{int}]{vet1\mbox{[}\+N\mbox{]}\mbox{[}\+M\mbox{]} }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{part2_8h_ae5a16053c43d552c2ffd05f6f5ce9059}\label{part2_8h_ae5a16053c43d552c2ffd05f6f5ce9059}} 
+\index{part2.h@{part2.h}!mixHalfVectors@{mixHalfVectors}}
+\index{mixHalfVectors@{mixHalfVectors}!part2.h@{part2.h}}
+\doxysubsubsection{\texorpdfstring{mixHalfVectors()}{mixHalfVectors()}}
+{\footnotesize\ttfamily void mix\+Half\+Vectors (\begin{DoxyParamCaption}\item[{int}]{vet1\mbox{[}\+N\mbox{]}\mbox{[}\+M\mbox{]} }\end{DoxyParamCaption})}
 
+Requests a new vector, and shows a vector that mixes half of the first one with half of the second one. \mbox{\Hypertarget{part2_8h_a0436ab4f13b54779e42cd9045207a699}\label{part2_8h_a0436ab4f13b54779e42cd9045207a699}} 
+\index{part2.h@{part2.h}!OddPrimeFactoring@{OddPrimeFactoring}}
+\index{OddPrimeFactoring@{OddPrimeFactoring}!part2.h@{part2.h}}
+\doxysubsubsection{\texorpdfstring{OddPrimeFactoring()}{OddPrimeFactoring()}}
+{\footnotesize\ttfamily void Odd\+Prime\+Factoring (\begin{DoxyParamCaption}\item[{int}]{vet\mbox{[}\+N\mbox{]}\mbox{[}\+M\mbox{]} }\end{DoxyParamCaption})}
 
+Prints the prime factoring of all of the vector\textquotesingle{}s odd numbers. \mbox{\Hypertarget{part2_8h_a75438b1cdfcdbe0a22279b21bbb541fc}\label{part2_8h_a75438b1cdfcdbe0a22279b21bbb541fc}} 
+\index{part2.h@{part2.h}!matrix18x18@{matrix18x18}}
+\index{matrix18x18@{matrix18x18}!part2.h@{part2.h}}
+\doxysubsubsection{\texorpdfstring{matrix18x18()}{matrix18x18()}}
+{\footnotesize\ttfamily void matrix18x18 (\begin{DoxyParamCaption}\item[{int}]{vet\mbox{[}\+N\mbox{]}\mbox{[}\+M\mbox{]},  }\item[{int}]{vet18x18\mbox{[}\+N\mbox{]}\mbox{[}\+N\mbox{]} }\end{DoxyParamCaption})}
 
-Reading a new vector, and shows a vector that mixes half of the first vector and half of the second. 
+Multiplies the input vector with a new one, creating an 18 by 18 matrix. \mbox{\Hypertarget{part2_8h_aa8cf062e466473e5a5c5632c49e3b0c8}\label{part2_8h_aa8cf062e466473e5a5c5632c49e3b0c8}} 
+\index{part2.h@{part2.h}!transpose18x18@{transpose18x18}}
+\index{transpose18x18@{transpose18x18}!part2.h@{part2.h}}
+\doxysubsubsection{\texorpdfstring{transpose18x18()}{transpose18x18()}}
+{\footnotesize\ttfamily void transpose18x18 (\begin{DoxyParamCaption}\item[{int}]{vet\mbox{[}\+N\mbox{]}\mbox{[}\+N\mbox{]} }\end{DoxyParamCaption})}
 
+Transposed from matrix 18 by 18. \mbox{\Hypertarget{part2_8h_ae19e0a10c9b6b5aaf1878cac27ea9541}\label{part2_8h_ae19e0a10c9b6b5aaf1878cac27ea9541}} 
+\index{part2.h@{part2.h}!printHelp@{printHelp}}
+\index{printHelp@{printHelp}!part2.h@{part2.h}}
+\doxysubsubsection{\texorpdfstring{printHelp()}{printHelp()}}
+{\footnotesize\ttfamily void print\+Help (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
 
-\begin{DoxyParams}{Parameters}
-{\em vet\mbox{[}\+N\mbox{]}\mbox{[}\+M\mbox{]}} & it is the vector created by the user. \\
-\hline
-\end{DoxyParams}
-\mbox{\Hypertarget{part2_8h_af705b93fa808a56cca1d212918d55427}\label{part2_8h_af705b93fa808a56cca1d212918d55427}} 
-\index{part2.h@{part2.h}!decompoeImparesEmPrimos@{decompoeImparesEmPrimos}}
-\index{decompoeImparesEmPrimos@{decompoeImparesEmPrimos}!part2.h@{part2.h}}
-\doxysubsubsection{\texorpdfstring{decompoeImparesEmPrimos()}{decompoeImparesEmPrimos()}}
-{\footnotesize\ttfamily void decompoe\+Impares\+Em\+Primos (\begin{DoxyParamCaption}\item[{int}]{vet\mbox{[}\+N\mbox{]}\mbox{[}\+M\mbox{]} }\end{DoxyParamCaption})}
-
-
-
-Decompose odd and prime numbers. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em vet\mbox{[}\+N\mbox{]}\mbox{[}\+M\mbox{]}} & it is the vector created by the user. \\
-\hline
-\end{DoxyParams}
-\mbox{\Hypertarget{part2_8h_a667541c1c5f695e29db9ad8e7bb616b5}\label{part2_8h_a667541c1c5f695e29db9ad8e7bb616b5}} 
-\index{part2.h@{part2.h}!matriz18por18@{matriz18por18}}
-\index{matriz18por18@{matriz18por18}!part2.h@{part2.h}}
-\doxysubsubsection{\texorpdfstring{matriz18por18()}{matriz18por18()}}
-{\footnotesize\ttfamily void matriz18por18 (\begin{DoxyParamCaption}\item[{int}]{vet\mbox{[}\+N\mbox{]}\mbox{[}\+M\mbox{]},  }\item[{int}]{vet18x18\mbox{[}\+N\mbox{]}\mbox{[}\+N\mbox{]} }\end{DoxyParamCaption})}
-
-
-
-18 by 18 matrix. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em vet\mbox{[}\+N\mbox{]}\mbox{[}\+M\mbox{]}} & it is the vector created by the user; \\
-\hline
-{\em vet18x18\mbox{[}\+N\mbox{]}\mbox{[}\+N\mbox{]}} & it is a matrix 18x18. \\
-\hline
-\end{DoxyParams}
-\mbox{\Hypertarget{part2_8h_abc10ab5c926f34c73ed847d4d5e03ada}\label{part2_8h_abc10ab5c926f34c73ed847d4d5e03ada}} 
-\index{part2.h@{part2.h}!transposta18por18@{transposta18por18}}
-\index{transposta18por18@{transposta18por18}!part2.h@{part2.h}}
-\doxysubsubsection{\texorpdfstring{transposta18por18()}{transposta18por18()}}
-{\footnotesize\ttfamily void transposta18por18 (\begin{DoxyParamCaption}\item[{int}]{vet\mbox{[}\+N\mbox{]}\mbox{[}\+N\mbox{]} }\end{DoxyParamCaption})}
-
-
-
-Transposed from matrix 18 by 18. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em vet\mbox{[}\+N\mbox{]}\mbox{[}\+M\mbox{]}} & it is the vector created by the user. \\
-\hline
-\end{DoxyParams}
+This function shows the user the help menu. 
